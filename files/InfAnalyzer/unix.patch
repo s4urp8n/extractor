@@ -1,0 +1,47 @@
+--- InfAnalyzer.dpr	2012-07-27 04:29:03.000000000 -0500
++++ InfAnalyzer_unix.dpr	2012-07-27 04:31:54.000000000 -0500
+@@ -1,7 +1,6 @@
+ program InfAnalyzer;
+-{$APPTYPE CONSOLE}
+ 
+-uses Windows,SysUtils,Classes,TntClasses,Lists,RegExpr;
++uses SysUtils,Classes,Lists,RegExpr;
+ 
+ var
+ Os5,Os6,Os7,Arch32,Arch64: boolean;
+@@ -366,7 +365,7 @@
+ 
+ var
+ //CurrentDir: string;
+-List1: TTntStringList;
++List1: TStringList;
+ i,j: integer;
+ Year: integer;
+ l,l1: string;
+@@ -389,7 +388,7 @@
+ 
+    AnalyzeOsInf(AnsiUpperCase(FName)); // ������ ����� �����
+ 
+-   List1 := TTntStringList.Create;
++   List1 := TStringList.Create;
+ 
+    if Length(ParamStr(2))>0 then goto 1; // �.�. �� Inf
+ 
+@@ -410,7 +409,7 @@
+ 
+    for i := 0 to List1.Count-1 do begin
+ 
+-   l := List1.AnsiStrings[i];
++   l := List1.Strings[i];
+    l := Trim(l);
+    if Length(l)<3 then Continue;
+ 
+@@ -442,7 +441,7 @@
+    if l='[MANUFACTURER]' then begin
+       j := 0; if i<List1.Count-1 then
+       Repeat
+-      Inc(j); l := List1.AnsiStrings[i+j]; l1 := '';
++      Inc(j); l := List1.Strings[i+j]; l1 := '';
+       if (Length(l)>2) and (l[1]<>';') then l1 := AnalyzeVendor(l);
+ //    MessageBox(GetActiveWindow,PChar(l+#13+l1),'Manufacturer',Mb_Ok);
+       if (Length(l1)>1) and (Pos(l1,Manufacturers)=0)
