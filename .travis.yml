@@ -1,0 +1,26 @@
+language: php
+
+php:
+  - 7
+  - 7.1
+
+before_script:
+  - sudo apt-get update -y -q
+  - sudo apt-get install wine -y -q
+  - sudo apt-get install p7zip -y -q
+  - sudo apt-get install p7zip-full -y -q
+  - sudo apt-get install unrar -y -q
+  - sudo apt-get install unrar-free -y -q
+  - WINEPREFIX="$HOME/prefix32" WINEARCH=win32 wine wineboot
+  - sudo apt-get install winetricks -y -q
+  - wget https://phar.phpunit.de/phpunit.phar
+  - composer self-update
+  - composer install
+  - chmod 777 ./phpunit.phar
+  - phpenv config-rm xdebug.ini
+  - sudo apt-get install xvfb
+  - xvfb :0 -screen 0 1024x768x16 &
+  - export DISPLAY=:0.0
+
+script:
+  - ./phpunit.phar
