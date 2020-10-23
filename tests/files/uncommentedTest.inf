@@ -1,0 +1,40 @@
+
+
+
+
+
+
+[Version]
+Signature=$Windows NT$
+Class=System
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider=%MFGNAME%
+CatalogFile=IFXTPM.cat
+DriverVer=12/14/2007,2.01.0001.00
+
+[DestinationDirs]
+DefaultDestDir=12
+
+CopyDriver	= 12
+
+[SourceDisksNames]
+1=%INSTDISK%,
+
+[SourceDisksFiles]
+IFXTPM.SYS=1
+
+[SourceDisksFiles.amd64]
+IFXTPM.SYS=1, amd64
+
+[Manufacturer]
+%MFGNAME%=Company, NT.5.1, NTamd64.5.1, NT.6.0, NTamd64.6.0
+
+
+
+
+
+
+[DriverInstall.NTx86]
+AddReg=CommonAddReg
+DelReg=CommonDelReg
+

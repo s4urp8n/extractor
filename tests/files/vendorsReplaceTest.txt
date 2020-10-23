@@ -1,0 +1,1556 @@
+ 3A International Inc.
+ 3Com Corporation
+ 3com Corporation
+ 3dfx Interactive Inc
+ 3Dlabs, Inc. Ltd
+ 3dpower
+ 3pardata Inc.
+ 4links
+ 8x8 Inc.
+ A-Max Technology Co Ltd
+ A-Trend Technology
+ A-Trend Technology Co Ltd
+ Aaeon Electronics Inc
+ Aashima Technology B.V.
+ ABB AB (Sweden)
+ ABB Network Partner AB
+ ABB Power Systems
+ ABB Robotics Products AB
+ Abekas, Inc
+ Abit Computer Corp.
+ AboCom Systems, Inc
+ Absolute Analysis
+ Acard Technology Corp.
+ Accton Technology Corporation
+ Accusys Inc
+ Acer aspire one
+ Acer Incorporated
+ Achme Computer Inc. - GONE !!!!
+ Acksys
+ ACPI\VEN_INT&DEV_33A0
+ Acqiris
+ Acresso Software Inc.
+ Actel
+ Actiontec Electronics Inc.
+ Aculab Plc.
+ Acumen
+ Adac Corporation
+ Adaptec Inc
+ Adaptec/Cogent Data Technologies
+ Adaptive Solutions
+ Adax Inc.
+ Addi-Data GMBH
+ Addonics
+ Adicti Corp.
+ ADLINK Technology Inc
+ Admore Technology Inc.
+ ADMtek Inc
+ Adobe Systems
+ Adtek System Science Co Ltd
+ Adtran
+ Advanced Integration Research
+ Advanced Logic Research Inc.
+ Advanced Micro Devices
+ Advanced Micro Devices, Inc.
+ Advanced Peripherals Labs
+ Advanced Peripherals Tech
+ Advanced System Products
+ Advanced Telecommunications Modules
+ Advanet Inc.
+ Advantech Co., Ltd.
+ AEG Electrocom GmbH
+ AG Communications
+ AG Electronics Ltd
+ AGEIA Technologies, Inc.
+ Agere Inc.
+ Agie SA.
+ Agilent Technologies
+ Aim GMBH
+ Aims Lab
+ Aiptek USA
+ Air Prime Inc
+ Aironet Wireless Communication
+ Aiwa Co. Ltd
+ Alacritech Inc
+ Alacron
+ Aladdin E-Token
+ Aladdin Knowledge Systems
+ Alaris Inc.
+ Alcatel Cit
+ Alchemy Semiconductor Inc.
+ Alcor Micro Corp.
+ Alesis Studio
+ Alfa Inc
+ Alfa Inc.
+ Ali Corporation
+ Allen Bradley Co.
+ Alliance Semiconductor
+ Allied Data Technologies
+ Allied Telesyn International
+ Aloka Co. Ltd
+ Alpha Data
+ Alpha Processor Inc
+ Alpha-Top Corp
+ Alpine Electronics Inc.
+ Alps Electronic Corp. Ltd.
+ Alta Technology Corp.
+ Alteon Networks Inc.
+ Altera Corporation
+ Altima Communications Inc.
+ Altos India Ltd.
+ Ambicom Inc
+ Ambient Technologies Inc
+ Ambit Microsystems Corp.
+ amc330
+ Amdahl Corp
+ American Megatrends Inc.
+ American Microsystems Inc
+ Amersham Pharmacia Biotech
+ AMO GmbH
+ AMP Incorporated
+ Amplicon Liveline Limited
+ Amtelco
+ Analog Devices, Inc.
+ Analogic Corp.
+ Ancor Communications Inc
+ Andor Technology Ltd
+ Andrew Corp.
+ Anigma Corp.
+ Annabooks
+ Annapolis Micro Systems Inc.
+ Antal Electronic
+ Antara LLC
+ Antex Electronics Corp.
+ Aopen Inc.
+ APD S.A.
+ Apex Inc
+ Apostolos
+ Appian Graphics
+ Apple Inc.
+ Applicom International
+ Applied Computing Systems Inc.
+ Applied Integration Corporation
+ Applied Intelligent Systems Inc
+ Applied Micro Circuits Corp.
+ Apricot Computers
+ Aptix Corporation
+ Aralion Inc.
+ Archtek Telecom Corp.
+ ARCOM Control Systems Ltd.
+ Arcus Technology Inc
+ Ardent Technologies Inc
+ Ariel Corporation
+ Arima Computer Corporation
+ ARK Logic, Inc
+ ARK Research Corp.
+ ARM Ltd
+ ARN
+ Array Corp
+ Array Microsystems
+ Artesyn Embedded Technologies
+ Artist Graphics
+ ArtX Inc
+ ARVOO Engineering BV
+ Asante Technologies Inc.
+ Ascii Corporation
+ Asiliant (Chips And Technologies)
+ Asix Electronics Corp.
+ ASMedia Technology Inc.
+ AST Research
+ Astrodesign Inc.
+ ASUS
+ Asustek - ASMedia Technology Inc.
+ Asustek Computer Inc.
+ Atan Technology Inc.
+ Atelier Informatiques et Electronique Et
+ Aten Research Inc.
+ Atheros Communications
+ Atheros Communications Inc.
+ Atlantek Microsystems Pty Ltd
+ Atmel Corp.
+ Atmel-Dream
+ Attachmate Corp.
+ Atto Technology
+ Audiocodes Inc
+ AuraVision Corporation
+ Aureal Semiconductor
+ Aurora Technologies Inc.
+ Auspex Systems Inc.
+ austriamicrosystems
+ Autologic Inc.
+ Automated Wagering International
+ Aval Nagasaki Corp.
+ Avance Logic Inc.
+ AVC Technology Inc.
+ Averna
+ Avid Technology, Inc.
+ Avlab Technology Inc.
+ AVM AUDIOVISUELLES MKTG & Computer GmbH
+ Avocent
+ Avsys Corporation
+ Avtec Systems Inc
+ Award Software Int'l Inc.
+ Axil Computer Inc.
+ Axzam Corporation
+ Aydin Corp
+ Aztech System Ltd
+ B-Tree Systems Inc
+ B2C2 Inc
+ BAE SYSTEMS - Manassas
+ Baldor Electric Company
+ Baltimore
+ Banctec
+ Banksoft Canada Ltd
+ Barco
+ Barr Systems Inc.
+ Basler GMBH
+ Bayer Corporation Agfa Div
+ BCM Advanced Research
+ BCom Electronics Inc
+ Beckhoff Automation GmbH
+ Becton & Dickinson
+ Behavior Tech Computer Corp
+ Bel Fuse Inc.
+ Bell Corporation
+ Berg Electronics
+ Berkshire Products
+ Bernecker + Rainer
+ Billionton Systems Inc./Cadmus Micro Inc
+ Biostar Microtech Intl Corp
+ Biotronic SRL
+ Bitboys OY
+ BitFlow Inc
+ Bitland
+ Bittware, Inc
+ Blue Chip Technology Ltd
+ Bluesteel Networks Inc
+ Boca Research Inc.
+ Boeing - Sunnyvale
+ Bops Inc
+ Brain Boxes Limited
+ Brains Co. Ltd
+ Braintech Inc
+ BREA Technologies Inc.
+ Bridgeport Machines
+ Broadcom
+ Broadcom / ServerWorks
+ Broadcom Corporation
+ Brocade Communications Systems
+ Brooktree Corporation
+ Brooktrout Technology Inc.
+ Brown & Sharpe Mfg. Co.
+ Bug Sapporo Japan
+ Bull Hn Information Systems
+ Burndy Corporation
+ Bus-Tech Inc.
+ BVM Limited
+ C&H Technologies Inc
+ C-Cube Microsystems
+ C-Media Electronics Inc.
+ C-Media Electronics, Inc.
+ C-Port Corporation
+ C.P. Technology Co. Ltd
+ Cabletron Systems Inc.
+ Cache Computer
+ Cacheflow Inc
+ Cadence Design Systems
+ Calculex Inc
+ Canon
+ Canon Information Systems
+ Canopus corporation
+ Capital Equipment Corp
+ Carry Computer Eng. Co Ltd
+ Casio Computer Co. Ltd.
+ CastleNet Technology Inc.
+ Catalyst Enterprises Inc
+ Catapult Communications
+ CCI/Triad
+ CE Infosys GMBH
+ Cenatek Inc.
+ Centillium Technology Corp
+ Central Data Corp.
+ Central System Research Co Ltd
+ Centre f/Dev. of Adv. Computing
+ Century Systems Inc.
+ CERN-European Lab. for Particle Physics
+ ChainTek Computer Co. Ltd.
+ Chameleon Systems Inc
+ Chaparral Network Storage
+ Chaplet System Inc
+ Chase Research PLC
+ Chelsio Communications
+ Chicony Electronics Co Ltd
+ Chicony Electronics Co.
+ Chori Joho System Co. Ltd
+ Chromatic Research Inc
+ Chrysalis-ITS
+ CIFELLI SYSTEMS CORPORATION
+ Cimetrics Inc
+ Cincinnati Milacron
+ Cipher Systems Inc
+ Circut Assembly Corp.
+ Cirel Systems
+ Cirrus Logic
+ CIS Technology Inc
+ Cisco Systems Inc
+ Citrix Systems, Inc.
+ City Gate Development LTD
+ Clarion Co. Ltd
+ Clearwater Networks
+ Cleveland Motion Controls
+ Clevo/Kapok Computer
+ CML Emergency Services
+ CNF Mobile Solutions
+ Co-Time Computer Ltd.
+ Cogency Semiconductor Inc.
+ Cognex
+ Cologne Chip Designs GmbH
+ Colorgraphic Communications Corp
+ Comartsystem Korea
+ Combox Ltd
+ Commtech, Inc.
+ Compal Electronics, Inc.
+ Compaq Computer Corp.
+ CompCore Multimedia Inc.
+ Compression Labs Inc.
+ Compumaster SRL
+ ComputerBoards
+ Computerm Corp.
+ Computervision
+ Computex Co Ltd
+ Computing Devices Intl
+ Computone Corporation
+ Computrend
+ Comstream
+ Comtrol Corp
+ Concept Development Inc.
+ Concurrent Technologies Inc.
+ Conexant
+ Connect Components, Ltd.
+ Connect Tech Inc.
+ Connectware Inc
+ Contec Microelectronics Europe BV
+ Contemporary Controls
+ Coreco Inc
+ Cornerstone Technology
+ Corollary Inc
+ CoSystems Inc.
+ Coyote Technologies LLC
+ CPU Technology
+ Cray, Inc.
+ Creamware GmbH
+ Creative Electronic Systems SA
+ Creative Technology LTD.
+ Crest Microsystem Inc
+ CRISC Corp.
+ Crosfield Electronics Ltd
+ Crosspoint Solutions Inc.
+ Cryptek
+ Crystal Group Inc
+ CSPI
+ CSS Corp
+ Curtiss Wright Controls Electronic Systems
+ Curtiss-Wright Controls Electronic Systems
+ Curtiss-Wright Controls Embedded Computing
+ Cyberdyne Inc.
+ Cyberfirm Inc.
+ Cybernetics Technology Co Ltd
+ Cyclades Corporation
+ Cyclone Microsystems Inc.
+ Cylink
+ Cypress Semiconductor
+ Cyrix Corporation
+ Cytec Corporation
+ D-Link Corporation
+ D-Link System Inc
+ D-MAX
+ D.C.M. Data Systems
+ Daewoo Telecom Ltd.
+ Dainippon Screen Mfg. Co
+ Dallas Semiconductor
+ Dapha Electronics Corporation
+ DAQDATA GmbH
+ Data General Corporation
+ Data Kinesis Inc.
+ Data Race Inc
+ Data Technology Corporation
+ Data Translation, Inc.
+ Databook Inc.
+ Datacube Inc.
+ Dataexpert Corporation
+ Datakinetics Ltd
+ Datalex Communcations
+ Datavoice (Pty) Ltd.
+ Dataworld
+ Datel Inc
+ Datum Inc. Bancomm-Timing Division
+ Davicom Semiconductor Inc.
+ Dawicontrol
+ Dazzle Multimedia Inc.
+ DCM Technologies Ltd.
+ DDK Electronics Inc
+ DDRdrive LLC
+ Decision Computer International Co.
+ Decros / S.ICZ a.s.
+ Dell Inc.
+ Delphax
+ Delta Electronics Inc
+ Densan Co. Ltd
+ Department Of Defense
+ Desana Systems
+ Deuretzbacher GmbH & Co. Eng. KG
+ devolo AG
+ DFI Inc.
+ DH electronics GmbH / Sabrent
+ Dialogic Corp.
+ Diamond Computer Systems
+ Diatrend Corporation
+ Digalog Systems Inc
+ Digi International
+ Digicom
+ Digicom Systems Inc.
+ Digigram
+ Digital Audio Labs Inc
+ Digital Equipment Corporation
+ Digital First
+ Digital Processing Systems Inc
+ Digital Receiver Technology Inc
+ Digitmedia Corp.
+ Dipix Technologies Inc
+ Distributed Processing Tech
+ Ditect Coop
+ Diva Systems Corp.
+ Diversified Technology
+ DLoG Gesellschaft für elektronische Datentechnik mbH
+ Document Technologies Ind.
+ Dolphin Interconnect Solutions
+ Dome Imaging Systems Inc
+ Doug Carson & Associates
+ Dreamtech Co Ltd
+ Drsearch GMBH
+ DSC Communications
+ DSP Research Inc
+ DTC Technology Corp.
+ DTK Computer
+ Dual Technology Corporation
+ Dunti Corp.
+ Dynachip Corporation
+ Dynamic Pictures Inc
+ Dynarc Inc
+ E-Tech Inc.
+ Eagle Technology
+ Eastman Kodak
+ Echelon Corporation
+ Echo Digital Audio Corporation
+ Echostar Data Networks
+ Echotek Corporation
+ Edax Inc.
+ Edec Co Ltd
+ EFA Corporation Of America
+ Efficent Networks
+ Egenera, Inc.
+ Egosys, Inc.
+ Eicon Networks Corporation
+ EKF Elektronik GMBH
+ Elan Digital Systems Ltd
+ Electronic-Design GmbH
+ Electronics & Telecommunication Res
+ Electronics for Imaging
+ Elitegroup Computer System
+ Elmec Inc. Ltd.
+ ELSA GmbH
+ Elsag Bailey
+ Eltec Elektronik AG
+ Emachines Inc.
+ EMC Corp.
+ Emulex Corporation
+ Encore Computer Corporation
+ Endace Measurement Systems Ltd.
+ ENE Technology Inc
+ Engineering Design Team Inc.
+ Ennyah Technologies Corp
+ Ensoniq
+ Entridia Corporation
+ Epix Inc.
+ EPoX Computer Co., Ltd.
+ Epson
+ Equator Technologies
+ Equinox Systems
+ Equus Computer Systems Inc
+ Erma - Electronic GMBH
+ ES Computer Co. Ltd.
+ esd Electronic System Design GmbH
+ Esec SA
+ ESS Technology
+ Essential Communications
+ Etron
+ Eumitcom Technology Inc
+ Eurocore/Vigra
+ Europop AG
+ Eurosoft (UK)
+ Evans & Sutherland
+ Everex Systems Inc.
+ Evergreen Technologies Inc
+ EVSX Inc
+ Exar Corp.
+ Excel Switching Corp
+ Excellent Design Inc.
+ Extreme Packet Device Inc
+ F5 Networks Inc.
+ Fairchild Semiconductor
+ Fanuc Co. Ltd
+ Faraday Technology Corp
+ FarSite Communications Limited
+ Fast Corporation
+ Fast Electronic GmbH
+ Fastfame Technology Co. Ltd.
+ Fastpoint Technologies Inc.
+ Feedback Instruments Ltd.
+ FERMA
+ FIC (First International Computer Inc)
+ Filanet Corporation
+ Filco
+ Firmworks
+ First International Computer Inc
+ First Virtual Corp
+ Fishcamp Engineering
+ Flytech Technology Co Ltd
+ Folsom Research Inc
+ Force Computers
+ FORE Systems
+ Forex Computer Corporation
+ Forks
+ Forks Inc
+ Formation, Inc
+ Forte Media
+ Fountain Technology
+ FourFold Technologies
+ Fresco Logic Inc.
+ Fuji Xerox Co Ltd
+ Fujifilm
+ Fujifilm Microdevices
+ Fujikura Ltd
+ Fujitsu Computer Products Of America
+ Fujitsu ICL Computers
+ Fujitsu Ltd.
+ Fujitsu Microelectronics Ltd.
+ Fujitsu Siemens
+ Fujitsu-Siemens Computers GmbH
+ Fundamental Software Inc
+ Futronic
+ Future Domain
+ Future Tel Inc.
+ Future+ Systems
+ FWB  Inc
+ G Force Co. Ltd.
+ G2 Networks Inc.
+ Gage Applied Technologies
+ Gainbery Computer Products Inc.
+ Gainward GmbH
+ Galea Network Security
+ Gammagraphx Inc.
+ GammaLink
+ Gatec
+ Gateway 2000
+ GDE Systems Inc.
+ GE Spacenet
+ Gec Plessey Semi Inc
+ Gemflex Networks
+ Gemlight Computer Ltd.
+ General Dynamics
+ General Dynamics Canada
+ General Electric
+ General Instrument
+ General Signal Networks
+ Genoa Systems Corp.
+ Genrad Inc.
+ Genroco Inc.
+ Geocast Network Systems Inc
+ Gespac
+ Gesytec GmbH
+ GET Engineering Corp.
+ Giga-Byte Technologies
+ Giganet Inc.
+ Gigapixel Corp
+ Gigi Operations
+ Gilbarco Inc.
+ GIT Co. Ltd.
+ Global Brands Manufacture Ltd.
+ Globe Manufacturing Sales
+ Globetek Inc.
+ Glotrex Co Ltd
+ GMM Research Corp.
+ Goldstar Co. Ltd.
+ Granite Microsystems
+ Granite Systems Inc.
+ Graphics Microsystems Inc
+ Graphin Co., LTD
+ Green Logic
+ Growth Networks
+ Guzik Technical Enterprises
+ GVC Corporation
+ GVC/BCM Advanced Research
+ GW Instruments
+ Hajime Industries Ltd
+ HAL Computer Systems Inc.
+ Hamamatsu Photonics K.K.
+ Harlequin Ltd
+ Harris Corp.
+ Hauppauge Computer Works Inc.
+ Heidelberg Digital LLC
+ Hercules
+ Hercules Computer Technology
+ Hermes Electronics Co. Ltd.
+ Hermstedt AG
+ Hertz Systemtechnik GMBH
+ Hewlett Packard
+ Hewlett-Packard
+ HI-FN Inc.
+ High Street Consultants
+ High Tech Computer Corp (HTC)
+ Highland Technology, Inc.
+ HighPoint Technologies, Inc.
+ Hightech Information Systems, Ltd.
+ Highwater Designs Ltd
+ Hilevel Technology
+ Hilscher GMBH
+ Hint Corp.
+ Hirakawa Hewtech Corp
+ Hitachi Computer Electronics
+ Hitachi Information Technology Co Ltd
+ Hitachi Ltd
+ Hitachi Micro Systems Inc
+ Hitachi Microcomputer System Ltd.
+ Hitachi Semiconductor & Devices Sales Co
+ Hitachi Zosen Corporation
+ Hitt
+ Hivertec Inc.
+ Holtek
+ Holtek Microelectronics Inc.
+ Honeywell IASD
+ Hopf Elektronik GMBH
+ Hotrail Inc.
+ Hsing Tech. Enterprise Co. Ltd.
+ Htec Ltd.
+ Hualon Microelectronics
+ Huawei Technologies Co., Ltd.
+ Hudson Soft Co Ltd
+ Hughes Network Systems
+ Humusoft S.R.O
+ Hybricon Corp
+ Hypercope Corp.
+ Hyperparallel Technologies
+ Hypertec Pty Ltd
+ Hytec Electronics Ltd
+ Hyundai Electronics America
+ Hyundai MultiCAV Computer Co. Ltd.
+ Hyunju Computer Co. Ltd.
+ I-Bus
+ I-Cube Inc
+ I-Data International A-S
+ I-O Data Device Inc.
+ iba AG
+ IBM
+ IC Corporation
+ IC Ensemble, Inc.
+ IC Plus Corporation
+ ICL
+ ICM Corp. Ltd.
+ ICP vortex Computersysteme GmbH
+ ICS Advent
+ IIX Consulting
+ ILC Data Device Corp.
+ Image Access
+ Image Technologies Development
+ Imagenation Corp.
+ Imaginant
+ Imagraph Corporation
+ Imation Corp. - Medical Imaging Syst
+ Imodl Inc.
+ Impacct Technology Corp
+ Impact Technologies
+ IN Win Development Inc.
+ Inari Inc.
+ Indigita Corporation
+ Inet Technologies Inc
+ Infimed
+ Infineon Technologies AG
+ InfiniCon Systems, Inc.
+ Info-Tek Corp.
+ Infomedia
+ Information Technology Inst.
+ Infortrend Technology Inc
+ Infotronic America Inc.
+ INH Semiconductor
+ Initio Corporation
+ Innomedia Inc
+ Innomedialogic Inc.
+ InnoSys Inc.
+ Innovative Integration
+ INPROCOMM
+ Insyde Software Corp
+ Int Labs
+ Intec GMBH
+ Integral Technologies
+ Integrated Circuit Systems
+ Integrated Computing Engines, Inc.
+ Integrated Device Technology Inc.
+ Integrated Telecom
+ Integrated Telecom Express Inc
+ intel
+ Intel
+ Intel Corporation
+ Intelligent Paradigm Inc
+ Intelligent Resources
+ Intelliworxx Inc
+ Intellon Corporation
+ Interactive Circuits & Systems Ltd
+ Interactive Computer Products Inc.
+ Interactive Images
+ Interagon AS
+ Intercom Inc.
+ Interconnect Systems Solutions
+ Interface Corp
+ Interface Corp. Ltd.
+ Intergraph Corporation
+ International Business Machines Corp.
+ International Microcircuits Inc
+ Internet Machines Corp.
+ Internix Inc.
+ Intersil Corporation
+ Intervoice Inc
+ Interware Co Ltd
+ Intraserver Technology Inc
+ Inventec Corporation
+ IOI Technology Corp.
+ Iotech Inc.
+ IPC Corporation LTD
+ Ishoni Networks
+ ISS Inc
+ Isytec - Integrierte Systemtechnik Gmbh
+ Italtel
+ ITEC Co Ltd
+ ITT Aerospace/Communications Division
+ Iwasaki Information Systems Co Ltd
+ Iwatsu Electric Co Ltd
+ Iwill Corporation
+ J. Bond Computer Systems
+ Jabil Circuit Inc.
+ Jace Tech Inc.
+ JAE Electronics Inc.
+ Janz Computer AG
+ Japan Elecronics Ind. Inc
+ Jato Technologies Inc.
+ Jaton Corporation USA
+ Jazz Multimedia
+ Jean Company Ltd
+ Jet Propulsion Laboratory
+ Jetway Information Co., Ltd
+ JMicron Technology Corp.
+ JNI Corporation
+ Jorge Scientific Corp.
+ Joytech Computer Co. Ltd.
+ Juko Electronics Inc. Ltd.
+ Jungsoft
+ Juniper Networks Inc.
+ Jupiter Systems
+ K.I. Technology Co Ltd
+ Kaiser Electronics
+ Kasan Electronics Co Ltd
+ Kasten Chase Applied Research
+ Kawasaki Heavy Industries Ltd
+ Kawasaki LSI USA Inc
+ Kawasaki Steel Corporation
+ KDS Innotech Corp.
+ Keithley Instruments, Inc
+ Kinetic Systems Corporation
+ Kingmax Technology Inc
+ Kingston Technology Co.
+ Kinpo Electronics Inc
+ Knowledge Technology Laboratories
+ Kofax Image Products
+ Koga Electronics Co
+ Kollmorgen Servotronix
+ Kolter Electronic - Germany
+ Komatsu Ltd.
+ Kondo Kagaku
+ Kongsberg Spacetec a.s.
+ Konica Corporation
+ Kontron Canada
+ Kontron Modular Computers GmbH (PEP Modular Computers GMBH)
+ Korg
+ KRF Tech Ltd
+ KUKA Roboter GmbH
+ KYE Systems Corp. / Pixart Imaging
+ KYE Systems Corporation
+ Kyoei Sangyo Co Ltd
+ Kyopal Co Ltd
+ Kyushu Electronics Systems Inc
+ L3 Communications
+ Labway Coporation
+ Lambda Systems Inc
+ Lancast Inc
+ Land Win Electronic Corp
+ Lara Technology Inc
+ LaserLinc Inc.
+ Lattice - Vantis
+ Lattice Semiconductor Corp
+ Lava Computer MFG Inc.
+ Lava Semiconductor Manufacturing Inc.
+ Leading Edge Products Inc
+ Leadtek Research
+ Lecroy Corporation
+ Lectron Co Ltd
+ Legend Ltd. (Beijing)
+ Leitch Technology International
+ Leutron Vision AG
+ Level One Communications
+ Lexmark International Inc.
+ LG (Lucky Goldstar) Electronics Inc.
+ LG Industrial Systems Co. Ltd.
+ Lightwell Co Ltd - Zax Division
+ Linear Systems Ltd.
+ LinkSys
+ Linux Networx
+ LiPPERT Embedded Computers GmbH
+ Lite-On Technology Corp.
+ Litronic Inc.
+ Logic Modeling
+ Logical Co Ltd
+ Logitec Corp.
+ Logitech Inc.
+ Loronix Information Systems, Inc.
+ LSI
+ LSI Corporation
+ LSI Logic
+ LSI Logic Headland Division
+ LSI Systems Inc
+ Lucent Technologies AMR
+ Luminex Software, Inc
+ Lung Hwa Electronics
+ LuxSonor Inc.
+ Lynx Studio Technology Inc
+ M-Systems Flash Disk Pioneers Ltd
+ MAC System Co Ltd
+ Macraigor Systems LLC
+ Macrolink Inc
+ Macronix International Co. Ltd.
+ Madge Networks
+ Maestro Digital Communications
+ MAGMA
+ Mainpine Limited
+ Maker Communications
+ Malleable Technologies Inc
+ Management Graphics Inc.
+ Mapletree Networks Inc.
+ Marathon Technologies Corp.
+ Marconi Commerce Systems SRL
+ Margi Systems Inc
+ Marian - Electronic & Software
+ Mark Of The Unicorn Inc
+ Marvell Semiconductor
+ Marvell Semiconductor Germany GmbH
+ Maspar Computer Corp.
+ master
+ Matrix Corp.
+ Matrox Electronic Systems Ltd.
+ Matsushita Electric Industrial Corp.
+ Matsushita Electric Works Ltd
+ Matsushita Electronics
+ Matsushita-Kotobuki Electronics Indu
+ Max Technologies Inc.
+ Maxtor Corporation
+ MAZeT GmbH
+ MeasureX Corp.
+ Med Associates Inc.
+ Media Reality Technology
+ Mediamatics
+ Mediaq Inc.
+ Mediastar Co. Ltd
+ MediaTek Inc.
+ Megachips Corporation
+ Megasoft Inc
+ Megatel
+ Meidensha Corporation
+ Meilhaus Electronic GmbH Germany
+ Meinberg Funkuhren GmbH & Co. KG
+ Melco Inc
+ Melec Inc
+ Mellanox Technology
+ MeltDown Systems LLC
+ Memec Design Services
+ Mentec Ltd.
+ Mentor Graphics Corp.
+ Mercury Computer Systems Inc.
+ Metheus Corporation
+ Michels & Kleberhoff Computer GmbH
+ Micrel Inc.
+ Micro Computer Systems Inc.
+ Micro Industries Corporation
+ Micro Science Inc
+ Micro-Star International Co Ltd
+ Micro-Technology Co Ltd
+ Microcomputer Systems (M) Son
+ Microdia Ltd.
+ Microdyne Corp.
+ Microgate Corp.
+ Micron Technology, Inc.
+ Micron/Crucial Technology
+ Micronics Computers Inc.
+ Microscan Systems Inc
+ Microtechnica Co Ltd
+ MicroUnity Systems Engineering Inc.
+ Middle Digital, Inc
+ Mikrotik
+ Millennium Engineering Inc
+ Millogic Ltd.
+ Mind/Share Inc.
+ Mindstream Computing
+ Mini-Max Technology Inc.
+ Minolta Co. Ltd.
+ Minton Optic Industry Co Ltd
+ MIPS Technologies, Inc
+ Miranda Technologies Ltd.
+ miro Computer Products AG
+ Mitac
+ Mitani Corp.
+ Mitel Corp.
+ Mitron Computer Inc.
+ Mitsubishi Electric Logistics Support Co
+ Mitsubishi Electric Microcomputer
+ Mitsubishi Electronics
+ Mitsubishi Electronics Corp.
+ Mitsui-Zosen System Research
+ Mitutoyo Corporation
+ MKNet Corporation
+ Mobham chip
+ Mobilian Israel Ltd
+ Mobility Electronics, Inc.
+ Modular Technology Ltd.
+ mohamed alsherif
+ Molex Incorporated
+ Momentum Data Systems
+ Monarch Innovative Technologies Pvt Ltd's
+ Moreton Bay
+ Mosaid Technologies Inc.
+ MosChip Semiconductor Technology
+ MOST Corp.
+ Motion Engineering Inc.
+ Motorola
+ Movita
+ Moxa Technologies Co Ltd
+ MULTIDATA GmbH
+ Music Semiconductors
+ Mutech
+ Mutoh Industries Inc
+ Mycom Inc
+ Mylex / Buslogic
+ MyName Technologies, Inc.
+ Myricom Inc.
+ Myson Technology Inc
+ N-Cubed.Net
+ Nallatech
+ Napatech A/S
+ National Datacomm Corp.
+ National Instruments
+ National Semiconductors
+ Nature Worldwide Technology Corp
+ NCR Corporation
+ NCS Computer Italia
+ Ncube
+ NDS Technologies Israel Ltd
+ NEC Computer International
+ NEC Corp.
+ NEC Electronics
+ Neomagic Corporation
+ Nest Inc
+ Net Insight
+ Netboost Corporation
+ NetChip
+ NetContinuum, Inc.
+ Neterion Inc.
+ Netframe Systems Inc.
+ Netgame Ltd
+ Netgear
+ NetOctave Inc.
+ Netpower Inc
+ Netspeed Inc.
+ Network Appliance
+ Network Computing Devices
+ Network General Corp
+ Network Peripherals Inc
+ Network Security Technologies Inc. (NetSec)
+ Networth controls
+ Networth Technologies Inc
+ Newer Technology Inc
+ NewGen Systems Corp.
+ News Datacom
+ Nexgen Microsystems
+ Nextcom K.K.
+ NICE Systems Inc.
+ Nicolet Technologies BV
+ Nihon Unisys Ltd.
+ Nikon Systems Inc
+ Ningbo Harrison Electronics Co Ltd
+ Nintendo Co. Ltd.
+ Nippon Systemware Co Ltd
+ Nippon Texa Co Ltd
+ Nippon Unisoft Corp.
+ Nissin Inc Co
+ Nitsuko Corporation
+ NKK Corporation
+ NMI Electronics Ltd.
+ Nokia Home Communications
+ Nokia Telecommunications OY
+ Nokia Wireless Business Communications
+ Norpak Corporation
+ Norsk Elektro Optikk A/S
+ Nortel Networks - BWA Division
+ Nortel Networks Corp.
+ North Atlantic Instruments
+ Northrop Grumman - Canada Ltd
+ Novell
+ NSI
+ NTT Advanced Technology Corp.
+ NTT Electronics  Corp.
+ Number Nine Visual Technology
+ NVIDIA
+ NXP Semiconductors N.V.
+ O.N. Electric Co. Ltd.
+ O2Micro Inc
+ OA Laboratory Co Ltd
+ Oak Technology
+ Oakleigh Systems Inc.
+ OCE - Industries S.A.
+ Oce Print Logics Technologies S.A.
+ Ocean Office Automation
+ Octave Communications Ind.
+ Odin Telesystems Inc
+ OEC Medical Systems Inc.
+ Oki Electric Industry
+ Olicom
+ Olivetti Advanced Technology
+ Olympus Optical Co. Ltd.
+ Omega Micro Inc.
+ Omni Media Technology Inc.
+ Omron Corp
+ Omron Corporation
+ One Stop Systems, Inc.
+ Onkyo Corp.
+ ONO Sokki
+ Open Network Co Ltd
+ OPTi Inc.
+ Optibase Ltd.
+ Option NV
+ Optivision Inc.
+ Opto 22
+ Oracle Corporation - InnoTek Systemberatung GmbH
+ Orange Micro, Inc.
+ Oregon Micro Systems Inc.
+ OSI Plus Corporation
+ Osicom Technologies Inc.
+ Otis Elevator Company
+ Oxford Semiconductor Ltd - now part of PLX Technology
+ Pacific Broadband Communications
+ Pacific Digital Corp.
+ Packard Bell
+ Packet Engines, Inc.
+ Pairgain Technologies
+ Palit Microsystems Inc
+ PAN International Industrial Corp
+ Panacom Technology Corporation
+ Panda Platinum
+ Parador
+ Paradyne Corp.
+ Parallax Graphics
+ Parsytec GmbH
+ Patapsco Designs Inc
+ Pathlight Technology Inc.
+ Patriot Scientific Corp.
+ PC Direct
+ PC Partner Limited
+ pctel
+ PCTEL Inc.
+ Peer Protocols Inc
+ Pelago Networks
+ Penta Media Co. Ltd
+ Pentek
+ Pentland Systems Ltd.
+ Peppercon AG
+ Perceptive Solutions Inc.
+ Performance Technologies Inc
+ Pericom Semiconductor
+ Periscope Engineering
+ Perle Systems Limited
+ PFU Ltd
+ Philips - Crypto
+ Philips Business Electronics B.V.
+ Philips Healthcare
+ Philips Semiconductors
+ Phillips Components
+ Phobos Corporation
+ Phoenix Technologies Ltd
+ Photoscript Group Ltd.
+ Photron Ltd.
+ Picopower Technology
+ Picture Elements Inc.
+ Picture Tel Japan KK
+ PictureTel Corp.
+ Pine Technology Ltd
+ PINE Technology, Ltd.
+ Pinnacle system
+ Pioneer Electronic Corporation
+ Pixera Corp
+ Pixstream Inc
+ Planex Communications, Inc.
+ Plant Equipment Inc.
+ Platform Technologies Inc.
+ PLDA
+ Pluto Technologies International
+ PLX Technology Inc.
+ PMC-Sierra Inc.
+ Point Multimedia Systems
+ Portwell Inc
+ Power Computing Corp.
+ Power I/O Inc.
+ Power Micro Research
+ Powermatic Data Systems Ltd
+ PPT Vision
+ Precision Digital Images
+ Primagraphics Ltd.
+ Primary Rate Inc
+ Primex Aerospace Co.
+ Prisa Networks
+ Procomp Informatics Ltd
+ Prolific Technology Inc.
+ Prolink Microsystems Corp.
+ Promax Systems Inc
+ Promise Technology
+ Prophet Systems Inc.
+ Prosys-TEC Inc.
+ Protac International Corp
+ Proteon Inc.
+ Provideo Multimedia Co Ltd
+ Proxim Inc.
+ Psion Dacom PLC
+ Pure Data
+ Purup-Eskofot A/S
+ PX Instruments Technology Ltd
+ Pyramid Technology
+ QLogic Corporation
+ Quadrics Ltd
+ Qualcomm Inc. USA
+ Quanta Computer Inc
+ Quantel
+ Quantum Corporation
+ Quantum Data Corp.
+ Quantum Designs (H.K.) Inc.
+ Quantum Designs Ltd.
+ Quatech Inc
+ Questra Corp
+ Quick-Serv. Computer Co. Ltd
+ Quicklogic Corp
+ Quicknet Technologies Inc
+ Quickturn Design Systems
+ Racal Interlan
+ Racore Computer Products
+ Radiolan
+ RadiSys Corporation
+ Radius Inc.
+ Radstone Technology Ltd.
+ Rainbow Technologies
+ Ralink Technology, Corp.
+ Rambus Inc.
+ Ramix Inc
+ Rapidstream Inc
+ Rascom Inc
+ Rasterops
+ Ratoc System Inc
+ Ravicad
+ Raychem
+ Raytheon Company
+ RDC Semiconductor Co., Ltd.
+ Real-Time Digital Inc.
+ Realtek Semiconductor Corp.
+ Rearden Steel
+ ReFLEX CES
+ Renesas Electronics
+ Renishaw PLC
+ Reply Group
+ Reprosoft Co Ltd
+ Resilience Corporation
+ Retix Corp.
+ Rhetorex Inc.
+ RicohCompany,Ltd.
+ Ritmo
+ Road Corporation
+ Rockwell-Collins Inc
+ Rohde & Schwarz GMBH & Co KG
+ Rohm Research
+ Ross Technology
+ Rosun Technologies Inc
+ RTD Embedded Technologies, Inc.
+ Ruby Tech Corp.
+ s
+ S S Technologies
+ S-Mos Systems
+ S.A. Telecommunications
+ S2io Inc
+ S3 Graphics Co., Ltd
+ SafeNet Inc.
+ Salient Systems Corp
+ Samsung Electronics Co. Ltd.
+ Samsung Information Systems America
+ Samsung Semiconductors
+ Samsung T10 MP3 Player
+ Samsung Windows Portable Devices
+ San Valley Systems, Inc.
+ Sand Microelectronics
+ Sandisk Corp.
+ Sanritz Automation Co LTC
+ sanyo
+ Sanyo Electric Co
+ SBE
+ SBS  Operations
+ SBS Technologies Inc.
+ SBS-OR Industrial Computers
+ Scalable Networks Inc.
+ Schneider Automation Inc.
+ Sci Systems Inc
+ sci-worx GmbH
+ Sciemetric Instruments Inc
+ Scientific Atlanta
+ Scion Corp
+ Scitex Corporation Ltd
+ SCM Microsystems
+ SDL Communications Inc.
+ Seachange International
+ Sealevel Systems Inc.
+ Seanix Technology Inc
+ Seaway Networks
+ Sebring Systems Inc
+ Second Wave Inc
+ Seeq Technology Inc.
+ Sega Enterprises Ltd
+ SEH Computertechnik GMBH
+ Seiko Epson Corporation
+ Seiko Instruments Inc
+ Sejin Computerland Co Ltd
+ Semtech Corporation
+ SensoMotoric Instruments GmbH
+ Sequent Computer Systems
+ Serome Technology Inc
+ ServerEngines
+ Servotest Ltd
+ Shade Ltd.
+ Shanghai Bell Company Limited
+ Shanghai Communications Technologies Cen
+ Sharewave Inc
+ Sharp Corporation
+ Shiba Denshi Systems Inc.
+ Shima Seiki Manufacturing Ltd.
+ Shiva Corporatin
+ Shiva Europe Ltd.
+ Shuttle Computer
+ SI Logic Ltd
+ Sibyte Inc.
+ Siemens AG
+ Siemens Healthcare
+ Sierra Research and Technology
+ Sierra Semiconductor
+ Sigma Designs Inc.
+ Sigma Designs, Inc
+ Sigmacom Co Ltd
+ Sigmatel Inc.
+ SIIG
+ SIIG, Inc.
+ Silex Technology Inc.
+ Silicon Engineering
+ Silicon Graphics
+ Silicon Image, Inc.
+ Silicon Integrated Systems
+ Silicon Laboratories
+ Silicon Magic
+ Silicon Motion
+ Silicon Spice Inc.
+ Simpact Inc
+ Sitecom
+ SK - Electronics Co., Ltd.
+ Sky Computers Inc
+ Skyware Corporation
+ SMA Technologie AG
+ Smart Electronic Development GMBH
+ Softing AG
+ Sola Electronics
+ Solectron
+ Solidum Systems Corp
+ Soliton Systems K.K.
+ Solitron Technologies Inc.
+ Solliday Engineering
+ Sonic Solutions
+ Sonicwall Inc
+ Sonnet Technologies, Inc.
+ Sony
+ Sony Corporation
+ Sopac Ltd
+ Sord Computer Corp.
+ Sorenson Vision Inc.
+ Source Technology Inc
+ Soyo Technology Corp. Ltd.
+ SP3D Chip Design GMBH
+ Spea Software AG
+ Specialix International Ltd.
+ Specialvideo Engineering SRL
+ Spectracom Corporation
+ Spectrum Digital Inc.
+ Spectrum Signal Processing
+ Spectrum Systementwicklung Microelectronic GmbH
+ Spellcaster Telecommunications Inc.
+ Splash Technology Inc.
+ SPOT Imaging Solutions a division of Diagnostic Instruments, Inc
+ Square Wave Technology
+ SSE Telecom Inc
+ Stallion Technologies
+ Standard Microsystems Corp.
+ Standard Microsystems Corporation
+ Star Multimedia Corp.
+ StarGen, Inc.
+ Start Network Technology Co., Ltd.
+ STB Systems
+ Stelar
+ Stellar Semiconductor Inc
+ STMicroelectronics
+ Stratabeam Technology
+ Stratus Computer
+ Stratus Computer Systems
+ Studio Audio & Video Ltd
+ Sumitomo Metal Industries Ltd.
+ Sun Microsystems
+ SUNIX Co., Ltd.
+ Sunlight Ultrasound Technologies Ltd
+ Super Micro Computer Inc
+ Supernet Inc.
+ Surecom Technology
+ SUYIN Corporation
+ Switched Network Technologies Inc.
+ Syba Tech Ltd.
+ Symbol Technologies, Inc.
+ Symicron Computer Communication Ltd.
+ Synaptel
+ Systech Corp.
+ System Craft Inc.
+ Systemax
+ Systemsoft Corporation
+ T-Square Design Inc.
+ T.Sqware
+ T/R Systems
+ Tachyon Inc.
+ Tahoma Technology
+ Taiwan Mycomp Co Ltd
+ Tamura Corporation
+ Tandem Computers
+ Tascorp
+ Tateno Dennou Inc.
+ Tateyama System Laboratory Co Ltd
+ Tatung Co.
+ Tatung Corp. Of America
+ TBS/Voyetra Technologies
+ TC Labs Pty Ltd.
+ TDK Semiconductor Corp.
+ TDK USA Corp.
+ Tec Corporation
+ Tech-Source
+ Technical Corp
+ Technical University Of Budapest
+ Technotrend Systemtechnik GMBH
+ Techsan Electronics Co Ltd
+ Techwell Inc
+ Teijin Seiki Co. Ltd.
+ TEK Microsystems Inc.
+ Tekelec Technologies
+ Tekram
+ Tekram Technology Corp. Ltd.
+ Tektronix
+ Telefon Aktiebolaget LM Ericsson
+ Telesoft Design Ltd
+ Telesynergy Research Inc.
+ Televox Software Inc.
+ Telocity Inc.
+ Temporal Research Ltd
+ Tenta Technology
+ Teradyne Inc.
+ Teralogic Inc
+ TeraRecon, Inc.
+ Terayon Communications Systems
+ Terratec Electronic GMBH
+ Testernec
+ Tews Technologies
+ Texas Instruments
+ Texas Memory Systems Inc
+ Texas Microsystems
+ TFL LAN Inc
+ The 3DO Company
+ themrtaish
+ Thesys Microelectronic's
+ Thine Electronics Inc
+ Thinking Machines Corporation
+ Third Millenium Test Solutions, Inc.
+ Thomson Video Networks
+ Thomson-CSF/TTM
+ Tiger Jet Network Inc
+ Tilera Corporation
+ Times N Systems Inc
+ Timestep Corp.
+ TMC Research
+ Tokai Communications Industry Co. Ltd
+ Tokimec Inc
+ Tokyo Denshi Sekei K.K.
+ Tokyo Electron Device Ltd.
+ Tokyo Electronic Industry Co. Ltd.
+ TOPCON Corp.
+ Topic Semiconductor Corp
+ Topstar Digital Technologies Co., Ltd.
+ Toshiba America
+ Toshiba Bluetooth RFBUS, RFCOM, RFHID
+ Toshiba corporation
+ Toshiba Engineering Corporation
+ Tottori Sanyo Electric Co Ltd
+ Toucan Technology
+ Toyota MACS Inc
+ TP-Link
+ Trancell Systems Inc
+ Transas Marine (UK) Ltd
+ Transition Networks
+ Transmeta Corp.
+ Transtech Parallel Systems
+ Transwitch Corp.
+ TRENTON Technology, Inc.
+ Tricord Systems Inc.
+ TRIDENT MICRO
+ Trigem Computer Inc.
+ Tripace
+ Tritech Microelectronics Intl PTE
+ Triya
+ Troika Networks Inc
+ TrueTime
+ Truevision
+ Tseng Labs
+ Tsenglabs International Corp.
+ TSI Telsys
+ Tulip Computers Int'l BV
+ Tundra Semiconductor Corp.
+ Turbocomm Tech Inc
+ Tvia, Inc.
+ Twinhead International Corp.
+ Tyan Computer
+ U.S. Robotics
+ ULSI
+ Ulticom, Inc.
+ UMAX Computer Corp.
+ Unex Technology Corp.
+ Unibrain S.A.
+ Unisys Corporation
+ Unisys Systems
+ Unitec Co. Ltd.
+ Unitech Electronics Co., Ltd
+ United Microelectronics
+ United Video Corp
+ Universal Scientific Ind.
+ UPEK
+ USB Rockey dongle from Feitain
+ USBPDO-8
+ Utimaco Safeware AG
+ Vadem
+ Validity Sensors, Inc.
+ Valley Technologies Inc
+ Valuesoft
+ Varian, Inc
+ Varisys Limited
+ Vector Informatik GmbH
+ Vela Research LP
+ Verisys Inc
+ Vertex Networks Inc.
+ Vetronix Corporation Engenharia Ltda
+ VIA Technologies, Inc.
+ Victor Co. of Japan Ltd.
+ Vidac Electronics GMBH
+ Video Logic Ltd.
+ Videomail Inc.
+ VideoTele.com Inc.
+ Videotron Corp
+ Vienna Systems
+ Viewcast Com
+ Viewgraphics Inc
+ Vingmed Sound A/S
+ Visicom Laboratories Inc.
+ Vision Dynamics Ltd.
+ Visionglobal Network Corp.
+ Visiontech Ltd
+ VisionTek
+ Vista Controls Corp
+ Visual Technology Inc.
+ Vitesse Semiconductor
+ Vivid Technology Inc
+ VLSI Solution OY
+ VLSI Technology
+ VMIC
+ VMware Inc.
+ Voarx R&D Inc
+ Voice Technologies Group
+ Voltaire Advanced Data Security Ltd
+ VSN Systemen BV
+ Vtech Engineering Canada Ltd.
+ Waldo
+ Warp Nine Engineering
+ Warpspped Inc
+ wch.cn
+ Weitek
+ Wellbean Co Inc
+ Western Avionics Ltd
+ Wilson .co .ltd
+ Win System Corporation
+ Winbond Electronics Corp.
+ Winbond Systems Labs
+ Winnov L.P.
+ Wipro Infotech Limited
+ WIS Technology, Inc.
+ Wistron Corp.
+ WMS Gaming
+ Wolf Technology Inc
+ Woodward McCoach Inc.
+ Workbit Corp
+ Worldspace Corp.
+ Wyse Technology
+ X-Net OY
+ Xerox Corporation
+ XGI Technology Inc
+ Xilinx Corporation
+ Xiotech Corp.
+ Xircom
+ Xirlink, Inc
+ Xpeed Inc.
+ Xpoint Technologies Inc
+ Xstreams PLC/ EPL Limited
+ Xylon Research Inc.
+ Yamaha Corporation
+ Yamakatsu Electronics Industry Co Ltd
+ Yamashita Systems Corp
+ Yaskawa Electric Co.
+ Yokogawa Electronic Corp.
+ YottaYotta Inc.
+ Young Micro Systems
+ Yuan Yuan Enterprise Co. Ltd.
+ Zapex Technologies Inc
+ Zarlink Semiconductor
+ Zenic Inc
+ Zenith Data Systems
+ Zenith Electronics Co
+ Ziatech Corporation
+ Zida Technologies Ltd.
+ Zilog
+ Zilog Inc.
+ ZNYX Corporation
+ Zoltrix International Limited
+ Zoom Telephonics Inc
+ Zoran Corporation
+ Ã‚as Ltd. de Phoenix del Âƒ de TecnologÃƒ

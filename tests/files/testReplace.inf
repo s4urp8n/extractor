@@ -1,0 +1,60 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Copyright 2015 Mad Catz
+;; Mad Catz Pro Flight TPM System
+;; x64
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[Version]
+Signature   = $CHICAGO$
+Class       = HIDClass
+ClassGuid   = {745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+Provider    = %PROVIDER%
+DriverVer   = 11/06/2015, 7.0.47.1 
+CatalogFile = Sai0B4D.cat
+PnpLockDown = 1
+%EXIST% = 1
+
+[Manufacturer]
+Saitek = SAITEK_MODELS, NTamd64
+ 
+[SAITEK_MODELS.NTamd64]
+%HID_NAME% = SAI_HID_Inst, HID\VID_06A3&PID_0B4D
+%USB_NAME% = SAI_USB_Inst, USB\VID_06A3&PID_0B4D
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[SourceDisksNames]
+1 = %DISKNAME%,,,.
+ 
+[SourceDisksFiles]
+SaiK0B4D.sys = 1 ; programming driver
+SaiC0B4D.dll = 1 ; control panel
+SaiC0B4D_0402.dll = 1 ; chinese language resources
+SaiC0B4D_05.dll   = 1 ; czech language resources
+SaiC0B4D_07.dll   = 1 ; german language resources
+SaiC0B4D_09.dll   = 1 ; english language resources
+SaiC0B4D_0A.dll   = 1 ; spanish language resources
+SaiC0B4D_0C.dll   = 1 ; french language resources
+
+[SAI_HID_Inst.AddReg.NTamd64]
+HKLM, %KEY_OEM%\VID_06A3&PID_0B4D,        OEMName,     0, %DEV_NAME%
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 
+[strings]
+KEY_OEM = "System\CurrentControlSet\Control\MediaProperties\PrivateProperties\Joystick\OEM"
+GUID_TORONTO = "{3B0BC249-97F2-49c7-A5B4-8AF34040E48D}"
+GUID_UF = "{49DEEB98-4F0F-41BA-B61D-05CB75A278DE}"
+
+GUID_CPL = "{36F5361F-1810-4DD9-A273-504799CA3B73}"
+GUID_ALIAS = "{1C7F1EC4-4D7A-48AA-945A-8595191CA60A}"
+GUID_BALIAS = "{771BC0C8-ED85-46E1-9413-8AAABAA85D3E}"
+
+PROVIDER = "Mad Catz"
+NOTEXIST = "MMM"
+DISKNAME = "Mad Catz Driver Media"
+DEV_NAME = "Mad Catz Pro Flight TPM System"
+HID_NAME = "Mad Catz Pro Flight TPM System (HID)"
+USB_NAME = "Mad Catz Pro Flight TPM System (USB)"
+
