@@ -1,0 +1,716 @@
+;////////////////////////////////////////////////////////////////////////////////
+;//
+;//                           (C) V-One, Inc. 2001
+;//      All rights are reserved.  Reproduction in whole or in part is prohibited
+;//      without the written consent of the copyright owner.
+;//
+;//      V-One, Inc. reserves the right to make changes without notice at any time.
+;//      V-One, Inc. makes no warranty, expressed, implied or statutory, including
+;//      but not limited to any implied warranty of merchantibility of fitness
+;//      for any particular purpose, or that the use will not infringe any
+;//      third party patent, copyright or trademark.
+;//      V-One, Inc. must not be liable for any loss or damage arising from its use.
+;//
+;////////////////////////////////////////////////////////////////////////////////
+
+;////////////////////////////////////////////////////////////////////////////////
+;//
+;// HPUsbPVR.inf
+;//
+;// This file contains installation information
+;// for the HPUsbPVR Device.
+;//
+;// Modification History:
+;// Date      By            Description
+;// --------  ------------  --------------------------------------------------
+;// 04/10/02  L.Kegulskiy   Created
+;//
+;////////////////////////////////////////////////////////////////////////////////
+
+[Version]
+Signature="$Chicago$"
+Class=Media
+ClassGUID={4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider=%HPUsbPVR.Provider%
+CatalogFile=HPUsbPVR.cat
+DriverVer=11/12/2003,1.1.3.112
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%HPUsbPVR.Manufacturer%=HPUsbPVR.Device
+
+[HPUsbPVR.Device]
+%HPUsbPVR.DeviceDesc%=HPUsbN.Install,USB\VID_049F&PID_008A
+%HPUsbPVR.DeviceDesc%=HPUsbP.Install,USB\VID_049F&PID_008C
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; HPUsbN.Install,USB\VID_049F&PID_008A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;----------------------------------------DDInstall Section for 9x/ME --------------------------------
+[HPUsbN.Install]
+AlsoInstall = KS.Registration(ks.inf), KSCAPTUR.Registration(kscaptur.inf), DVD.Copy.SYS(dvd.inf)
+DelReg      = HPUsbPVR.DelReg
+AddReg      = HPUsbPVR.AddReg,HPUsbPVR.PinNames,EzdFilters.AddReg,HPUsbN.AddReg.HwConfig
+CopyFiles   = HPUsbPVR.CopyFiles,EzdFilters.CopyFiles,uCode.CopyFiles
+
+;----------------------------------------DDInstall Section for NT/2K/XP -----------------------------
+[HPUsbN.Install.NT]
+Include     = ks.inf, kscaptur.inf, ksfilter.inf
+Needs       = KS.Registration,KSCAPTUR.Registration.NT
+DelReg      = HPUsbPVR.DelReg
+AddReg      = HPUsbPVR.AddReg,HPUsbPVR.PinNames,EzdFilters.AddReg,HPUsbN.AddReg.HwConfig
+CopyFiles   = HPUsbPVR.CopyFiles,EzdFilters.CopyFiles,uCode.CopyFiles
+
+; ---------------------------- Interface Installation Sections ----------------------------
+[HPUsbN.Install.Interfaces]
+AddInterface=%KSCATEGORY_CAPTURE%,"Capture",VideoCaptureTV,
+AddInterface=%KSCATEGORY_CROSSBAR%,"Capture",VideoCrossbar,
+AddInterface=%KSCATEGORY_TVTUNER%,"Capture",VideoTvTuner,
+AddInterface=%KSCATEGORY_TVAUDIO%,"Capture",VideoTvAudio,
+AddInterface=%KSCATEGORY_ENCODER%,"Encoder",VideoEncoder,
+AddInterface=%KSCATEGORY_MULTIPLEXER%,"Encoder",VideoEncoder,
+
+[HPUsbN.Install.NT.Interfaces]
+AddInterface=%KSCATEGORY_CAPTURE%,"Capture",VideoCaptureTV,
+AddInterface=%KSCATEGORY_CROSSBAR%,"Capture",VideoCrossbar,
+AddInterface=%KSCATEGORY_TVTUNER%,"Capture",VideoTvTuner,
+AddInterface=%KSCATEGORY_TVAUDIO%,"Capture",VideoTvAudio,
+AddInterface=%KSCATEGORY_ENCODER%,"Encoder",VideoEncoder,
+AddInterface=%KSCATEGORY_MULTIPLEXER%,"Encoder",VideoEncoder,
+
+; ---------------------------- Service Installation Sections---------------------------------------
+[HPUsbN.Install.Services]
+AddService = HPUsbPVR,0x00000002,HPUsbPVR.ServiceInstall
+
+[HPUsbN.Install.NT.Services]
+AddService = HPUsbPVR,0x00000002,HPUsbPVR.ServiceInstall
+
+; ---------------------------- Hardware Configuration Section ---------------------------------------
+[HPUsbN.AddReg.HwConfig]
+;;HKR,HwConfig,TunerModel,0x10001,1236
+;;HKR,HwConfig,TunerHasFM,0x10001,0
+HKR,HwConfig,PreferredVideoStandard,0x10001,1
+;;HKR,HwConfig,IR,0x10001,0
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; HPUsbN.Install,USB\VID_049F&PID_008A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; HPUsbP.Install,USB\VID_049F&PID_008C;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;----------------------------------------DDInstall Section for 9x/ME --------------------------------
+[HPUsbP.Install]
+AlsoInstall = KS.Registration(ks.inf), KSCAPTUR.Registration(kscaptur.inf), DVD.Copy.SYS(dvd.inf)
+DelReg      = HPUsbPVR.DelReg
+AddReg      = HPUsbPVR.AddReg,HPUsbPVR.PinNames,EzdFilters.AddReg,HPUsbP.AddReg.HwConfig
+CopyFiles   = HPUsbPVR.CopyFiles,EzdFilters.CopyFiles,uCode.CopyFiles
+
+;----------------------------------------DDInstall Section for NT/2K/XP -----------------------------
+[HPUsbP.Install.NT]
+Include     = ks.inf, kscaptur.inf, ksfilter.inf
+Needs       = KS.Registration,KSCAPTUR.Registration.NT
+DelReg      = HPUsbPVR.DelReg
+AddReg      = HPUsbPVR.AddReg,HPUsbPVR.PinNames,EzdFilters.AddReg,HPUsbP.AddReg.HwConfig
+CopyFiles   = HPUsbPVR.CopyFiles,EzdFilters.CopyFiles,uCode.CopyFiles
+
+; ---------------------------- Interface Installation Sections ----------------------------
+[HPUsbP.Install.Interfaces]
+AddInterface=%KSCATEGORY_CAPTURE%,"Capture",VideoCaptureTV,
+AddInterface=%KSCATEGORY_CROSSBAR%,"Capture",VideoCrossbar,
+AddInterface=%KSCATEGORY_TVTUNER%,"Capture",VideoTvTuner,
+AddInterface=%KSCATEGORY_TVAUDIO%,"Capture",VideoTvAudio,
+AddInterface=%KSCATEGORY_ENCODER%,"Encoder",VideoEncoder,
+AddInterface=%KSCATEGORY_MULTIPLEXER%,"Encoder",VideoEncoder,
+
+[HPUsbP.Install.NT.Interfaces]
+AddInterface=%KSCATEGORY_CAPTURE%,"Capture",VideoCaptureTV,
+AddInterface=%KSCATEGORY_CROSSBAR%,"Capture",VideoCrossbar,
+AddInterface=%KSCATEGORY_TVTUNER%,"Capture",VideoTvTuner,
+AddInterface=%KSCATEGORY_TVAUDIO%,"Capture",VideoTvAudio,
+AddInterface=%KSCATEGORY_ENCODER%,"Encoder",VideoEncoder,
+AddInterface=%KSCATEGORY_MULTIPLEXER%,"Encoder",VideoEncoder,
+
+; ---------------------------- Service Installation Sections---------------------------------------
+[HPUsbP.Install.Services]
+AddService = HPUsbPVR,0x00000002,HPUsbPVR.ServiceInstall
+
+[HPUsbP.Install.NT.Services]
+AddService = HPUsbPVR,0x00000002,HPUsbPVR.ServiceInstall
+
+; ---------------------------- Hardware Configuration Section ---------------------------------------
+[HPUsbP.AddReg.HwConfig]
+;;HKR,HwConfig,TunerModel,0x10001,1216
+;;HKR,HwConfig,TunerHasFM,0x10001,0
+HKR,HwConfig,PreferredVideoStandard,0x10001,16
+;;HKR,HwConfig,IR,0x10001,0
+HKR,Persist,"UseKfirFullVbiUCode",0x10001,1
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; HPUsbP.Install,USB\VID_049F&PID_008C ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;----------------------------------------File Copy related Sections ---------------------------------
+[DestinationDirs]
+;DefaultDestDir=10,system32\drivers
+HPUsbPVR.CopyFiles=10,system32\drivers
+uCode.CopyFiles=10,system32\drivers\HPUsbPVR
+EzdFilters.CopyFiles=11
+
+[HPUsbPVR.CopyFiles]
+HPUsbPVR.sys
+
+[uCode.CopyFiles]
+k2.v
+k2_m1.v
+k2sp.v
+k2sp1.v
+k2VbiN.v
+k2VbiP.v
+
+[EzdFilters.CopyFiles]
+EzdFWrtr.ax
+EzdFCtrl.ax
+EzdReg32.dll
+EzIKfir.ax
+EzRating.dll 
+
+[SourceDisksNames]
+3333=%HPUsbPVR.InstallationDir%,,,
+
+[SourceDisksFiles]
+HPUsbPVR.sys=3333
+k2.v=3333
+k2_m1.v=3333
+k2sp.v=3333
+k2sp1.v=3333
+k2VbiN.v=3333
+k2VbiP.v=3333
+EzdReg32.dll=3333
+EzIKfir.ax=3333
+EzdFWrtr.ax=3333
+EzdFCtrl.ax=3333
+EzRating.dll=3333
+
+
+;----------------------------------------AddReg sections  ------------------------------------------
+[HPUsbPVR.DelReg]
+; Clear the tree first
+HKR,HwConfig
+HKR,Encode
+HKR,SAA7114
+HKR,Persist
+HKR,Msp34x5
+HKR,FileNames
+HKR,,PageOutWhenUnopened
+
+[HPUsbPVR.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,HPUsbPVR.sys
+;HKR,,PageOutWhenUnopened,3,01
+HKR,,DontSuspendIfStreamsAreRunning,3,01
+
+
+;
+; FileNames
+;
+HKR,FileNames,MpegAudioMicrocode,,\SystemRoot\system32\drivers\HPUsbPVR\k2.v
+HKR,FileNames,Mpeg1Microcode,,\SystemRoot\system32\drivers\HPUsbPVR\k2_m1.v
+HKR,FileNames,VcdMicrocode,,\SystemRoot\system32\drivers\HPUsbPVR\k2sp.v
+HKR,FileNames,SvcdMicrocode,,\SystemRoot\system32\drivers\HPUsbPVR\k2sp1.v
+HKR,FileNames,RawVbiNtscMicrocode,,\SystemRoot\system32\drivers\HPUsbPVR\k2VbiN.v
+HKR,FileNames,RawVbiPalMicrocode,,\SystemRoot\system32\drivers\HPUsbPVR\k2VbiP.v
+
+
+;
+; SAA7114
+;
+HKR,SAA7114,"DeviceAddress",0x10001, 42,00,00,00
+;HKR,SAA7114,"CrystalFrequencyKHz",0x10001, 24576 ; 24.576
+HKR,SAA7114,"CrystalFrequencyKHz",0x10001, 32110 ; 32.11
+
+; Registers 01h to 05h Front-End Part and 06h to 19h Decoder Part
+HKR,SAA7114\FrontEndAndDecoder,"StartingRegAddress",0x10001,00,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"TotalRegisters",0x10001,1A,00,00,00 ;count is 26 = 0x1A
+HKR,SAA7114\FrontEndAndDecoder,"Reg00",0x10001,  00,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg01",0x10001,  08,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg02",0x10001,  C0,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg03",0x10001,  04,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg04",0x10001,  90,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg05",0x10001,  90,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg06",0x10001,  eb,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg07",0x10001,  e0,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg08",0x10001,  F8,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg09",0x10001,  40,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg0A",0x10001,  80,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg0B",0x10001,  44,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg0C",0x10001,  40,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg0D",0x10001,  00,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg0E",0x10001,  00,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg0F",0x10001,  00,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg10",0x10001,  0E,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg11",0x10001,  41,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg12",0x10001,  00,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg13",0x10001,  00,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg14",0x10001,  00,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg15",0x10001,  11,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg16",0x10001,  fe,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg17",0x10001,  40,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg18",0x10001,  40,00,00,00
+HKR,SAA7114\FrontEndAndDecoder,"Reg19",0x10001,  80,00,00,00
+
+; Registers 30h to 3Ah Audio clock generation
+HKR,SAA7114\AudioClockGeneration,"StartingRegAddress",0x10001,30,00,00,00
+HKR,SAA7114\AudioClockGeneration,"TotalRegisters",0x10001,0B,00,00,00 ;count is 11 = 0x0B
+HKR,SAA7114\AudioClockGeneration,"Reg30",0x10001,  cd,00,00,00
+HKR,SAA7114\AudioClockGeneration,"Reg31",0x10001,  20,00,00,00
+HKR,SAA7114\AudioClockGeneration,"Reg32",0x10001,  03,00,00,00
+HKR,SAA7114\AudioClockGeneration,"Reg33",0x10001,  00,00,00,00
+HKR,SAA7114\AudioClockGeneration,"Reg34",0x10001,  ce,00,00,00
+HKR,SAA7114\AudioClockGeneration,"Reg35",0x10001,  fb,00,00,00
+HKR,SAA7114\AudioClockGeneration,"Reg36",0x10001,  30,00,00,00
+HKR,SAA7114\AudioClockGeneration,"Reg37",0x10001,  00,00,00,00
+HKR,SAA7114\AudioClockGeneration,"Reg38",0x10001,  01,00,00,00
+HKR,SAA7114\AudioClockGeneration,"Reg39",0x10001,  20,00,00,00
+HKR,SAA7114\AudioClockGeneration,"Reg3a",0x10001,  01,00,00,00
+
+; Registers 40h to 5Fh General purpose data slicer
+HKR,SAA7114\DataSlicer,"StartingRegAddress",0x10001,40,00,00,00
+HKR,SAA7114\DataSlicer,"TotalRegisters",0x10001,20,00,00,00 ;count is 32 = 0x20
+HKR,SAA7114\DataSlicer,"Reg40",0x10001,  40,00,00,00
+HKR,SAA7114\DataSlicer,"Reg41",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg42",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg43",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg44",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg45",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg46",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg47",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg48",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg49",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg4a",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg4b",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg4c",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg4d",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg4e",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg4f",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg50",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg51",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg52",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg53",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg54",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg55",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg56",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg57",0x10001,  ff,00,00,00
+HKR,SAA7114\DataSlicer,"Reg58",0x10001,  01,00,00,00
+HKR,SAA7114\DataSlicer,"Reg59",0x10001,  47,00,00,00
+HKR,SAA7114\DataSlicer,"Reg5a",0x10001,  06,00,00,00
+HKR,SAA7114\DataSlicer,"Reg5b",0x10001,  83,00,00,00
+HKR,SAA7114\DataSlicer,"Reg5c",0x10001,  00,00,00,00
+HKR,SAA7114\DataSlicer,"Reg5d",0x10001,  3e,00,00,00
+HKR,SAA7114\DataSlicer,"Reg5e",0x10001,  2a,00,00,00
+HKR,SAA7114\DataSlicer,"Reg5f",0x10001,  00,00,00,00
+
+; Registers 80h to 88h Global settings
+HKR,SAA7114\GlobalSettings,"StartingRegAddress",0x10001,80,00,00,00
+HKR,SAA7114\GlobalSettings,"TotalRegisters",0x10001,09,00,00,00 ;count is 9 = 0x09
+HKR,SAA7114\GlobalSettings,"Reg80",0x10001,  00,00,00,00
+HKR,SAA7114\GlobalSettings,"Reg81",0x10001,  00,00,00,00
+HKR,SAA7114\GlobalSettings,"Reg82",0x10001,  00,00,00,00
+HKR,SAA7114\GlobalSettings,"Reg83",0x10001,  01,00,00,00
+HKR,SAA7114\GlobalSettings,"Reg84",0x10001,  A0,00,00,00
+HKR,SAA7114\GlobalSettings,"Reg85",0x10001,  10,00,00,00
+HKR,SAA7114\GlobalSettings,"Reg86",0x10001,  45,00,00,00
+HKR,SAA7114\GlobalSettings,"Reg87",0x10001,  01,00,00,00
+HKR,SAA7114\GlobalSettings,"Reg88",0x10001,  F0,00,00,00
+
+
+; Registers 90h to BFh Scaler Register Set A
+HKR,SAA7114\ScalerA,"StartingRegAddress",0x10001,90,00,00,00
+HKR,SAA7114\ScalerA,"TotalRegisters",0x10001,30,00,00,00 ;count is 48 = 0x30
+HKR,SAA7114\ScalerA,"Reg90",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"Reg91",0x10001,  08,00,00,00
+HKR,SAA7114\ScalerA,"Reg92",0x10001,  10,00,00,00
+HKR,SAA7114\ScalerA,"Reg93",0x10001,  80,00,00,00
+HKR,SAA7114\ScalerA,"Reg94",0x10001,  10,00,00,00
+HKR,SAA7114\ScalerA,"Reg95",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"Reg96",0x10001,  D0,00,00,00
+HKR,SAA7114\ScalerA,"Reg97",0x10001,  02,00,00,00
+HKR,SAA7114\ScalerA,"Reg98",0x10001,  0F,00,00,00
+HKR,SAA7114\ScalerA,"Reg99",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"Reg9A",0x10001,  FF,00,00,00
+HKR,SAA7114\ScalerA,"Reg9B",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"Reg9C",0x10001,  D0,00,00,00
+HKR,SAA7114\ScalerA,"Reg9D",0x10001,  02,00,00,00
+HKR,SAA7114\ScalerA,"Reg9E",0x10001,  0F,00,00,00
+HKR,SAA7114\ScalerA,"Reg9F",0x10001,  01,00,00,00
+HKR,SAA7114\ScalerA,"RegA0",0x10001,  01,00,00,00
+HKR,SAA7114\ScalerA,"RegA1",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegA2",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegA3",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegA4",0x10001,  80,00,00,00
+HKR,SAA7114\ScalerA,"RegA5",0x10001,  40,00,00,00
+HKR,SAA7114\ScalerA,"RegA6",0x10001,  40,00,00,00
+HKR,SAA7114\ScalerA,"RegA7",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegA8",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegA9",0x10001,  04,00,00,00
+HKR,SAA7114\ScalerA,"RegAA",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegAB",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegAC",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegAD",0x10001,  02,00,00,00
+HKR,SAA7114\ScalerA,"RegAE",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegAF",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegB0",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegB1",0x10001,  04,00,00,00
+HKR,SAA7114\ScalerA,"RegB2",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegB3",0x10001,  04,00,00,00
+HKR,SAA7114\ScalerA,"RegB4",0x10001,  01,00,00,00
+HKR,SAA7114\ScalerA,"RegB5",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegB6",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegB7",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegB8",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegB9",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegBA",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegBB",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegBC",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegBD",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegBE",0x10001,  00,00,00,00
+HKR,SAA7114\ScalerA,"RegBF",0x10001,  00,00,00,00
+
+
+
+;
+; Msp34x5
+;
+HKR,Msp34x5,"DeviceAddress",0x10001, 80,00,00,00
+
+
+;
+; CS53L32A
+;
+HKR,CS53L32A,"DeviceAddress",0x10001, 20,00,00,00
+
+; Registers 01h to 07h
+HKR,CS53L32A,"StartingRegAddress",0x10001,01,00,00,00
+HKR,CS53L32A,"TotalRegisters",0x10001,06,00,00,00
+HKR,CS53L32A,"Reg01",0x10001,  03,00,00,00
+HKR,CS53L32A,"Reg02",0x10001,  00,00,00,00
+HKR,CS53L32A,"Reg03",0x10001,  30,00,00,00
+HKR,CS53L32A,"Reg04",0x10001,  00,00,00,00
+HKR,CS53L32A,"Reg05",0x10001,  00,00,00,00
+HKR,CS53L32A,"Reg06",0x10001,  00,00,00,00
+
+
+;
+; FM1236MK3
+;
+HKR,FM1236MK3,"DeviceAddress",0x10001, C0,00,00,00
+
+; Registers 00h to 04h
+HKR,FM1236MK3,"StartingRegAddress",0x10001,00,00,00,00
+HKR,FM1236MK3,"TotalRegisters",0x10001,05,00,00,00
+HKR,FM1236MK3,"Reg00",0x10001,  0E,00,00,00
+HKR,FM1236MK3,"Reg01",0x10001,  20,00,00,00
+HKR,FM1236MK3,"Reg02",0x10001,  CA,00,00,00
+HKR,FM1236MK3,"Reg03",0x10001,  21,00,00,00
+HKR,FM1236MK3,"Reg04",0x10001,  A0,00,00,00
+
+
+;
+; TEMIC4136FY5
+;
+HKR,TEMIC4136FY5,"DeviceAddress",0x10001, C0,00,00,00
+
+; Registers 00h to 03h
+HKR,TEMIC4136FY5,"StartingRegAddress",0x10001,00,00,00,00
+HKR,TEMIC4136FY5,"TotalRegisters",0x10001,04,00,00,00
+HKR,TEMIC4136FY5,"Reg00",0x10001,  00,00,00,00
+HKR,TEMIC4136FY5,"Reg01",0x10001,  00,00,00,00
+HKR,TEMIC4136FY5,"Reg02",0x10001,  00,00,00,00
+HKR,TEMIC4136FY5,"Reg03",0x10001,  00,00,00,00
+
+
+
+;
+; Video Filters
+;
+
+; Filter 1, cutoff frequency at 2.5MHz
+HKR,VideoFilter_2_5,"C0",0x10001, 80 
+HKR,VideoFilter_2_5,"C1",0x10001, 141
+HKR,VideoFilter_2_5,"C2",0x10001, 188
+HKR,VideoFilter_2_5,"C3",0x10001, 206
+HKR,VideoFilter_2_5,"C4",0x10001, 188
+HKR,VideoFilter_2_5,"C5",0x10001, 141
+HKR,VideoFilter_2_5,"C6",0x10001, 80 
+
+; Filter 2, cutoff frequency at 3.0MHz
+HKR,VideoFilter_3_0,"C0",0x10001, 51 
+HKR,VideoFilter_3_0,"C1",0x10001, 134
+HKR,VideoFilter_3_0,"C2",0x10001, 208
+HKR,VideoFilter_3_0,"C3",0x10001, 237
+HKR,VideoFilter_3_0,"C4",0x10001, 208
+HKR,VideoFilter_3_0,"C5",0x10001, 134
+HKR,VideoFilter_3_0,"C6",0x10001, 51 
+
+; Filter 3, cutoff frequency at 3.5MHz
+HKR,VideoFilter_3_5,"C0",0x10001, 20 
+HKR,VideoFilter_3_5,"C1",0x10001, 123
+HKR,VideoFilter_3_5,"C2",0x10001, 230
+HKR,VideoFilter_3_5,"C3",0x10001, 278
+HKR,VideoFilter_3_5,"C4",0x10001, 230
+HKR,VideoFilter_3_5,"C5",0x10001, 123
+HKR,VideoFilter_3_5,"C6",0x10001, 20 
+
+; Filter 4, cutoff frequency at 4.0MHz
+HKR,VideoFilter_4_0,"C0",0x10001, -11
+HKR,VideoFilter_4_0,"C1",0x10001, 106
+HKR,VideoFilter_4_0,"C2",0x10001, 255
+HKR,VideoFilter_4_0,"C3",0x10001, 324
+HKR,VideoFilter_4_0,"C4",0x10001, 255
+HKR,VideoFilter_4_0,"C5",0x10001, 106
+HKR,VideoFilter_4_0,"C6",0x10001, -11
+
+; Filter 5, cutoff frequency at 4.5MHz
+HKR,VideoFilter_4_5,"C0",0x10001, -37
+HKR,VideoFilter_4_5,"C1",0x10001, 82 
+HKR,VideoFilter_4_5,"C2",0x10001, 278
+HKR,VideoFilter_4_5,"C3",0x10001, 378
+HKR,VideoFilter_4_5,"C4",0x10001, 278
+HKR,VideoFilter_4_5,"C5",0x10001, 82 
+HKR,VideoFilter_4_5,"C6",0x10001, -37
+
+; Filter 6, cutoff frequency at 5.0MHz
+HKR,VideoFilter_5_0,"C0",0x10001, -53
+HKR,VideoFilter_5_0,"C1",0x10001, 51 
+HKR,VideoFilter_5_0,"C2",0x10001, 297
+HKR,VideoFilter_5_0,"C3",0x10001, 435
+HKR,VideoFilter_5_0,"C4",0x10001, 297
+HKR,VideoFilter_5_0,"C5",0x10001, 51 
+HKR,VideoFilter_5_0,"C6",0x10001, -53
+
+; Filter 7, cutoff frequency at 5.5MHz
+HKR,VideoFilter_5_5,"C0",0x10001, -56
+HKR,VideoFilter_5_5,"C1",0x10001, 16 
+HKR,VideoFilter_5_5,"C2",0x10001, 307
+HKR,VideoFilter_5_5,"C3",0x10001, 490
+HKR,VideoFilter_5_5,"C4",0x10001, 307
+HKR,VideoFilter_5_5,"C5",0x10001, 16 
+HKR,VideoFilter_5_5,"C6",0x10001, -56
+
+; Filter 8, cutoff frequency at 6.0MHz
+HKR,VideoFilter_6_0,"C0",0x10001, -47
+HKR,VideoFilter_6_0,"C1",0x10001, -18
+HKR,VideoFilter_6_0,"C2",0x10001, 306
+HKR,VideoFilter_6_0,"C3",0x10001, 542
+HKR,VideoFilter_6_0,"C4",0x10001, 306
+HKR,VideoFilter_6_0,"C5",0x10001, -18
+HKR,VideoFilter_6_0,"C6",0x10001, -47
+
+; Filter 9, cutoff frequency at 6.5MHz
+HKR,VideoFilter_6_5,"C0",0x10001, -29
+HKR,VideoFilter_6_5,"C1",0x10001, -47
+HKR,VideoFilter_6_5,"C2",0x10001, 296
+HKR,VideoFilter_6_5,"C3",0x10001, 584
+HKR,VideoFilter_6_5,"C4",0x10001, 296
+HKR,VideoFilter_6_5,"C5",0x10001, -47
+HKR,VideoFilter_6_5,"C6",0x10001, -29
+
+; Filter 10, cutoff frequency at 7.0MHz
+HKR,VideoFilter_7_0,"C0",0x10001, -9 
+HKR,VideoFilter_7_0,"C1",0x10001, -68
+HKR,VideoFilter_7_0,"C2",0x10001, 278
+HKR,VideoFilter_7_0,"C3",0x10001, 622
+HKR,VideoFilter_7_0,"C4",0x10001, 278
+HKR,VideoFilter_7_0,"C5",0x10001, -68
+HKR,VideoFilter_7_0,"C6",0x10001, -9 
+
+; Filter 11, cutoff frequency at 7.5MHz
+HKR,VideoFilter_7_5,"C0",0x10001, 8  
+HKR,VideoFilter_7_5,"C1",0x10001, -80
+HKR,VideoFilter_7_5,"C2",0x10001, 255
+HKR,VideoFilter_7_5,"C3",0x10001, 658
+HKR,VideoFilter_7_5,"C4",0x10001, 255
+HKR,VideoFilter_7_5,"C5",0x10001, -80
+HKR,VideoFilter_7_5,"C6",0x10001, 8  
+
+; Filter 12, cutoff frequency at 8.0MHz
+HKR,VideoFilter_8_0,"C0",0x10001, 19 
+HKR,VideoFilter_8_0,"C1",0x10001, -84
+HKR,VideoFilter_8_0,"C2",0x10001, 228
+HKR,VideoFilter_8_0,"C3",0x10001, 698
+HKR,VideoFilter_8_0,"C4",0x10001, 228
+HKR,VideoFilter_8_0,"C5",0x10001, -84
+HKR,VideoFilter_8_0,"C6",0x10001, 19 
+
+; Filter 13, cutoff frequency at 8.5MHz
+HKR,VideoFilter_8_5,"C0",0x10001, 21 
+HKR,VideoFilter_8_5,"C1",0x10001, -79
+HKR,VideoFilter_8_5,"C2",0x10001, 200
+HKR,VideoFilter_8_5,"C3",0x10001, 740
+HKR,VideoFilter_8_5,"C4",0x10001, 200
+HKR,VideoFilter_8_5,"C5",0x10001, -79
+HKR,VideoFilter_8_5,"C6",0x10001, 21 
+
+;
+; IRD
+;
+;HKR,IRD,IrEnumName,,EZD\IR_REV0
+;HKR,IRD,IrFriendlyName,,Infrared device
+
+
+;HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Media Center\Service\Video,"EnableCC/XDS", 0x10001, 0
+
+;HKR,Persist,"UseKfirFullVbiUCode",0x10001,1
+
+;
+HKR,Encode\Mpeg2,"BRAG_PcrRate",0x10001,100
+
+;;; ---------------------------- REGISTER EMUZED DIRECTSHOW FILTERS
+[EzdFilters.AddReg]
+HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce,"EzIKfir.ax",,"RunDll32.exe %11%\EzdReg32.dll,RegisterControl %11%\EzIKfir.ax"
+HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce,"EzdFWrtr.ax",,"RunDll32.exe %11%\EzdReg32.dll,RegisterControl %11%\EzdFWrtr.ax"
+HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce,"EzdFCtrl.ax",,"RunDll32.exe %11%\EzdReg32.dll,RegisterControl %11%\EzdFCtrl.ax"
+HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce,"EzRating.dll",,"RunDll32.exe %11%\EzdReg32.dll,RegisterControl %11%\EzRating.dll"
+
+
+
+[VideoCaptureTV]
+AddReg=VideoCaptureTV.AddReg
+
+[VideoCrossbar]
+AddReg=VideoXBar.AddReg
+
+[VideoTvTuner]
+AddReg=VideoTvTuner.AddReg
+
+[VideoTvAudio]
+AddReg=VideoTvAudio.AddReg
+
+[VideoEncoder]
+AddReg=VideoEncoder.AddReg
+
+
+[VideoCaptureTV.AddReg]
+HKR,,CLSID,,%ProxyGenericWdmFilter.CLSID%
+HKR,,FriendlyName,,%HPUsbPVR.DeviceDesc%
+HKR,PinFactory\0\Interfaces\{C6E13343-30AC-11d0-A18C-00A0C9118956},,,{C6E13343-30AC-11d0-A18C-00A0C9118956}
+
+[VideoXBar.AddReg]
+HKR,,CLSID,,%ProxyXBar.CLSID%
+HKR,,FriendlyName,,%HPUsbPVR.Crossbar%
+
+[VideoTvTuner.AddReg]
+HKR,,CLSID,,%ProxyTvTuner.CLSID%
+HKR,,FriendlyName,,%HPUsbPVR.TvTuner%
+
+[VideoTvAudio.AddReg]
+HKR,,CLSID,,%ProxyTvAudio.CLSID%
+HKR,,FriendlyName,,%HPUsbPVR.TvAudio%
+
+[VideoEncoder.AddReg]
+HKR,,CLSID,,%ProxyGenericWdmFilter.CLSID%
+HKR,,FriendlyName,,%HPUsbPVR.Encoder%
+HKR,Interfaces\{B43C4EEC-8C32-4791-9102-508ADA5EE8E7},,,
+
+;;;;;;;;;;;;;;;;;;;; TEMP STUFF ;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;; TEMP STUFF ;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;; TEMP STUFF ;;;;;;;;;;;;;;;;;;;;
+HKCR,%ActiveMovieCategories%\%GUID.Encoder%,CLSID,,%GUID.Encoder%
+HKCR,%ActiveMovieCategories%\%GUID.Encoder%,FriendlyName,,%Category_Encoders%
+HKCR,%ActiveMovieCategories%\%GUID.Multiplexer%,CLSID,,%GUID.Multiplexer%
+HKCR,%ActiveMovieCategories%\%GUID.Multiplexer%,FriendlyName,,%Category_Multiplexers%
+
+HKLM,%MediaCategories%\%GUID.Encoder%,Name,,%Node.Encoder%
+HKLM,%MediaCategories%\%GUID.Encoder%,Display,1,00,00,00,00
+HKLM,%MediaCategories%\%GUID.Multiplexer%,Name,,%Node.Multiplexer%
+HKLM,%MediaCategories%\%GUID.Multiplexer%,Display,1,00,00,00,00
+;;;;;;;;;;;;;;;;;;;; TEMP STUFF ;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;; TEMP STUFF ;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;; TEMP STUFF ;;;;;;;;;;;;;;;;;;;;
+
+
+
+[HPUsbPVR.ServiceInstall]
+DisplayName   = %HPUsbPVR.DeviceDesc%
+ServiceType   = 1 ;SERVICE_KERNEL_DRIVER
+StartType     = 3 ;SERVICE_DEMAND_START
+ErrorControl  = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary = %12%\HPUsbPVR.sys
+
+[HPUsbPVR.PinNames]
+HKLM,%MediaCategories%\%GUID.PINNAME_MPEG_OUT%,Name,,%STRING.PINNAME_MPEG_OUT%
+HKLM,%MediaCategories%\%GUID.PINNAME_VIRT_VIDEO_OUT%,Name,,%STRING.PINNAME_VIRT_VIDEO_OUT%
+HKLM,%MediaCategories%\%GUID.PINNAME_VIRT_VIDEO_IN%,Name,,%STRING.PINNAME_VIRT_VIDEO_IN%
+HKLM,%MediaCategories%\%GUID.PINNAME_VIRT_AUDIO_OUT%,Name,,%STRING.PINNAME_VIRT_AUDIO_OUT%
+HKLM,%MediaCategories%\%GUID.PINNAME_VIRT_AUDIO_IN%,Name,,%STRING.PINNAME_VIRT_AUDIO_IN%
+HKLM,%MediaCategories%\%GUID.PINNAME_ANALOG_AUDIO_IN%,Name,,%STRING.PINNAME_ANALOG_AUDIO_IN%
+
+
+
+;---------------------------------------------------------------
+;                S t r i n g s
+;---------------------------------------------------------------
+
+[Strings]
+;;;;;;;;;;;;;;;;;;;; TEMP STUFF ;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;; TEMP STUFF ;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;; TEMP STUFF ;;;;;;;;;;;;;;;;;;;;
+GUID.Encoder="{19689BF6-C384-48fd-AD51-90E58C79F70B}"
+GUID.Multiplexer="{7A5DE1D3-01A1-452c-B481-4FA2B96271E8}"
+ActiveMovieCategories="CLSID\{da4e3da0-d07d-11d0-bd50-00a0c911ce86}\Instance"
+
+;
+; Localizeable String Entries
+;
+Category_Encoders="WDM Streaming Encoder Devices"
+Category_Multiplexers="WDM Streaming Multiplexer Devices"
+Node.Encoder="Encoder"
+Node.Multiplexer="Multiplexer"
+;;;;;;;;;;;;;;;;;;;; TEMP STUFF ;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;; TEMP STUFF ;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;; TEMP STUFF ;;;;;;;;;;;;;;;;;;;;
+
+;----------------
+; Non-Localizable
+;----------------
+ProxyGenericWdmFilter.CLSID = "{17CCA71B-ECD7-11D0-B908-00A0C9223196}"
+ProxyXBar.CLSID             = "{71F96460-78F3-11d0-A18C-00A0C9118956}"
+ProxyTvTuner.CLSID          = "{266EEE40-6C63-11cf-8A03-00AA006ECB65}"
+ProxyTvAudio.CLSID          = "{71F96462-78F3-11d0-A18C-00A0C9118956}"
+
+MediaCategories="SYSTEM\CurrentControlSet\Control\MediaCategories"
+
+GUID.PINNAME_MPEG_OUT       = "{21CD80CC-F4D3-4289-B203-EDC0F4EECDF4}"
+GUID.PINNAME_VIRT_VIDEO_OUT = "{5DEDF652-71F0-48c3-98D8-DE564D10AE96}"
+GUID.PINNAME_VIRT_VIDEO_IN  = "{476878CB-A52C-4efe-9975-03A8C7DDB440}"
+GUID.PINNAME_VIRT_AUDIO_OUT = "{9A990B97-05FB-4d92-B496-C6ADFD2B07A6}"
+GUID.PINNAME_VIRT_AUDIO_IN  = "{E751FC26-9583-4cfc-81F7-0A36FBA2B4ED}"
+GUID.PINNAME_ANALOG_AUDIO_IN= "{2C0B4FFB-3CE8-4f34-AE98-618BAD6EAAAF}"
+
+
+KSCATEGORY_CAPTURE  = "{65e8773d-8f56-11d0-a3b9-00a0c9223196}"
+KSCATEGORY_CROSSBAR = "{a799a801-a46d-11d0-a18c-00a02401dcd4}"
+KSCATEGORY_TVTUNER  = "{a799a800-a46d-11d0-a18c-00a02401dcd4}"
+KSCATEGORY_TVAUDIO  = "{a799a802-a46d-11d0-a18c-00a02401dcd4}"
+KSCATEGORY_ENCODER  = "{19689BF6-C384-48fd-AD51-90E58C79F70B}"
+KSCATEGORY_MULTIPLEXER  = "{7A5DE1D3-01A1-452c-B481-4FA2B96271E8}"
+
+
+
+;----------------
+; Localizable
+;----------------
+STRING.PINNAME_MPEG_OUT       = "MPEG Out"
+STRING.PINNAME_VIRT_VIDEO_OUT = "Virtual Video Out"
+STRING.PINNAME_VIRT_VIDEO_IN  = "Virtual Video In"
+STRING.PINNAME_VIRT_AUDIO_OUT = "Virtual Audio Out"
+STRING.PINNAME_VIRT_AUDIO_IN  = "Virtual Audio In"
+STRING.PINNAME_ANALOG_AUDIO_IN= "Analog Audio In"
+
+HpUsbPVR.InstallationDir       = "HP USB TV Tuner and Personal Video Recorder Drivers"
+HpUsbPVR.Provider              = "HP"
+HpUsbPVR.Manufacturer          = "HP"
+HpUsbPVR.DeviceDesc            = "HP USB TV Tuner and Personal Video Recorder Device"
+HpUsbPVR.Crossbar              = "HP USB TV Tuner and Personal Video Recorder Crossbar"
+HpUsbPVR.TvTuner               = "HP USB TV Tuner and Personal Video Recorder TvTuner"
+HpUsbPVR.TvAudio               = "HP USB TV Tuner and Personal Video Recorder TvAudio"
+HpUsbPVR.Encoder               = "HP USB TV Tuner and Personal Video Recorder Encoder"
+

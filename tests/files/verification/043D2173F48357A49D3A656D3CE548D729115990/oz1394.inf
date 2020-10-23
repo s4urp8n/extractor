@@ -1,0 +1,35 @@
+;  O2Micro 1394 Host Controller Driver INF
+;  CopyRight (c) 2009 O2Micro Inc.
+
+[Version]
+Signature="$CHICAGO$"
+Class=1394
+ClassGuid={6BDD1FC1-810F-11D0-BEC7-08002BE2092F}
+Provider=%O2%
+DriverVer=08/26/2009,6.1.7600.16385
+Catalogfile=oz1394.cat
+
+[SourceDisksFiles]
+
+[SourceDisksNames]
+
+[Manufacturer]
+%O2%=O2MicroGen, NTx86
+
+[O2MicroGen.NTx86]
+%PCI\VEN_1217&DEV_10F7.Desc%=MsLegacy, PCI\VEN_1217&DEV_10F7
+%PCI\VEN_1217&DEV_00F7.Desc%=MsLegacy, PCI\VEN_1217&DEV_00F7
+
+[MsLegacy.NT]
+Include=1394.inf
+Needs=Legacy.Install.NT
+
+[MsLegacy.NT.Services]
+Include=1394.inf
+Needs=Legacy.Install.NT.Services
+
+[Strings]
+O2="O2Micro Inc."
+PCI\VEN_1217&DEV_10F7.Desc="O2Micro 1394 OHCI Compliant Host Controller"
+PCI\VEN_1217&DEV_00F7.Desc="O2Micro 1394 OHCI Compliant Host Controller"
+

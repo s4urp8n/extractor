@@ -1,0 +1,540 @@
+;------------------------------------------------------------------------
+; 
+;  Copyright and Disclaimer: 
+;  
+;     --------------------------------------------------------------- 
+;     This software is provided "AS IS" without warranty of any kind, 
+;     either expressed or implied, including but not limited to the 
+;     implied warranties of noninfringement, merchantability and/or 
+;     fitness for a particular purpose.
+;     --------------------------------------------------------------- 
+;   
+;     Copyright (c) 2009 Conexant Systems, Inc. 
+;     All rights reserved. 
+;
+;     ---------------------------------------------------------------
+;
+;   Abstract:
+;   This is the polaris AVStream video/audio capture driver inf file
+;   for the following polaris reference designs:
+;    
+;   RDE258M DVBT MiniCard Adapter - Analog + DVB-T(NXP_18271 +  Cx24232) 
+;-------------------------------------------------------------------------
+;                            RDE258M
+;BoardType                   11 (RDE258M)     
+;TunerType                   0x2B     
+;TunerI2CAddress             0xC2
+;AnalogTunerXTALFreq         32MHz 
+;BDA_Demod_Tuner_type        10 (CE6353+XC5200)                    
+;DemodXTALFreqKHz            20.4MHz           
+;DemodI2CAddress             0x1E   
+
+
+[Version]
+signature="$CHICAGO$"
+Class=Media
+ClassGUID={4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider="Conexant"
+DriverVer=05/11/2011,7.0.121.10
+CatalogFile=cxRDE258M.cat
+
+[Manufacturer]
+"Conexant"=Conexant, NTx86, NTamd64
+
+[SourceDisksNames]
+1="Conexant Polaris Drivers",,,""
+
+[SourceDisksFiles]
+cxRDE258M.sys=1
+cpnotify.ax=1
+cxtvrate.dll=1
+y8cnvt.ax=1
+merlind.rom=1
+CxPolaris.ax=1
+
+[Conexant.NTx86]
+
+;For Polaris A0 chip based boards
+%CXPOLARIS.DeviceDesc-RDE258M%=POLARIS.RDE258M,  USB\VID_0572&PID_58AE&Rev_0001&MI_01
+
+;For Polaris B1 chip based boards
+%CXPOLARIS.DeviceDesc-RDE258M%=POLARIS.RDE258M,  USB\VID_0572&PID_58AE&Rev_4001&MI_01
+
+;If CIR function is not wanted, install this dummy CIR driver
+;%CXPOLARIS.DeviceDesc-CIR%=POLARIS.CIR,  USB\VID_0572&PID_58AE&MI_00
+
+
+[Conexant.NTamd64]
+
+
+;For Polaris A0 chip based boards
+%CXPOLARIS.DeviceDesc-RDE258M%=POLARIS.RDE258M,  USB\VID_0572&PID_58AE&Rev_0001&MI_01
+
+;For Polaris B1 chip based boards
+%CXPOLARIS.DeviceDesc-RDE258M%=POLARIS.RDE258M,  USB\VID_0572&PID_58AE&Rev_4001&MI_01
+
+;If CIR function is not wanted, install this dummy CIR driver
+;%CXPOLARIS.DeviceDesc-CIR%=POLARIS.CIR,  USB\VID_0572&PID_58AE&MI_00
+
+[POLARIS.CIR]
+
+[POLARIS.CIR.NT]
+
+[POLARIS.CIR.NT.Services]
+AddService = , 2  ; null service install
+
+[POLARIS.RDE258M]
+Include=    ks.inf, kscaptur.inf,ksfilter.inf, wdmaudio.inf, bda.inf
+Needs=      KS.Registration, KSCAPTUR.Registration,MSPCLOCK.Installation, WDMAUDIO.Registration, BDA.Registration, bda.Installation
+AddReg=     POLARIS.AddReg,POLARISVID.AddReg,WIN2K_AUDIO_CAPTURE.Addreg,CXDVBT.AddReg, RDE258M.AddReg
+CopyFiles=  CXPOLARIS.CopyDrivers,DSFilters.CopyFiles
+RegisterDlls=DSFilters.RegDLL    
+
+[POLARIS.RDE258M.NT]
+Include=    ks.inf, kscaptur.inf,ksfilter.inf, wdmaudio.inf, bda.inf
+Needs=      KS.Registration, KSCAPTUR.Registration.NT,MSPCLOCK.Installation, WDMAUDIO.Registration, BDA.Registration, bda.Installation.NT
+AddReg=     POLARIS.AddReg,PolarisVID.AddReg,CXDVBT.AddReg, RDE258M.AddReg
+CopyFiles=  CXPOLARIS.CopyDrivers,DSFilters.CopyFiles
+RegisterDlls=DSFilters.RegDLL  
+
+
+[DestinationDirs]
+CXPOLARIS.CopyDrivers=10,system32\drivers
+DSFilters.CopyFiles=11
+
+[CXPOLARIS.CopyDrivers]
+cxRDE258M.sys
+merlinD.rom
+
+[DSFilters.CopyFiles]
+cpnotify.ax
+cxtvrate.dll
+y8cnvt.ax
+CxPolaris.ax
+
+
+[DSFilters.RegDLL]
+11,,cpnotify.ax,1
+11,,cxtvrate.dll,1
+11,,y8cnvt.ax,1
+11,,CxPolaris.ax,1
+
+[WIN2K_AUDIO_CAPTURE.Addreg]
+
+HKR,Drivers,SubClasses,,"wave"
+HKR,Drivers\wave\wdmaud.drv, Driver,,wdmaud.drv
+HKR,Drivers\wave\wdmaud.drv,Description,,%PolarisAudioFriendlyName%
+
+[PolarisVID.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,cxRDE258M.sys
+HKR,,OkToHibernate,3,01
+; Disable driver page out
+HKR,,PageOutWhenUnopened,3,0
+;HKR,,PageOutWhenUnopened,3,01
+HKR,,DontSuspendIfStreamsAreRunning,3,01
+
+HKLM,%MediaInterfaces%\{0A7AF963-6805-4f99-B284-29B680975542},,,"Copy Protect Notification Filter"
+HKLM,%MediaInterfaces%\{0A7AF963-6805-4f99-B284-29B680975542},IID,1,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+HKLM,%MediaCategories%\%POLARIS_GUID.PINNAME_ANALOG_AUDIO_IN%,Name,,%Pin.p2AnalogAudioIn%
+HKLM,%MediaCategories%\%POLARIS_GUID.PINNAME_AUDIO_OUT%,Name,,%PinName.AnalogAudioOut%
+
+;Add the property pages
+;
+HKCR,CLSID\%GUID.DriverVersion_Properties%\InprocServer32,,,Cxpolaris.ax
+HKCR,CLSID\%GUID.DriverVersion_Properties%\InprocServer32,ThreadingModel,,Both
+HKLM,%MediaSets%\%GUID.POLARIS_VERSION_INFORMATION_PROPERTIES%\PropertyPages\%GUID.DriverVersion_Properties%,,,
+
+;Copy protection method enforced by driver
+HKR,"DriverData","CpMethod",0x00010001, 0xFE, 0x00, 0x00, 0x00
+
+
+
+;------------------------------
+
+[POLARIS.AddReg]
+
+; Sony format = 1, Philips format = 0
+HKR,"DriverData","I2SInputFormat",0x00010001, 0x00, 0x00, 0x00, 0x00
+
+HKR,"DriverData","EnableAFAudio",0x00010001, 0x01, 0x00, 0x00, 0x00
+HKR,"DriverData","GpioMaskFM",0x00010001, 0x01, 0x00, 0x00, 0x00
+HKR,"DriverData","GpioSettingFM",0x00010001, 0x01, 0x00, 0x00, 0x00
+
+HKR,"DriverData","VideoStandard",0x00010001, 0x20,0x00,0x00,0x00
+
+;Gain has 7 levels in volume up and down directions. each level gives 6db gain or attenuation
+;for attenuation we need to use 2's complement values. 
+;for Gain we use levels 1-7, for attenuation we use levels 0x9(-7) - 0xF (-1)
+HKR,"DriverData","FMAudioGain",0x00010001, 0x1, 0x00, 0x00, 0x00
+
+
+; for Polaris testing, select HANC to transfer Audio
+HKR,"DriverData","EnableHANCAudioOut",0x00010001, 0x00, 0x00, 0x00, 0x00
+
+; ----GPIO Pin values -----
+; IMPORTANT !!! if any GPIO is not used - just delete the corresponding entry !!!
+
+; AGC_Analog_Digitial_Select_Gpio_Bit is controlled by GPIO 28
+HKR,"DriverData","AGC_Analog_Digitial_Select_Gpio_Bit", 0x00010001, 0x1C, 0x00, 0x00, 0x00
+;gpio pin status mask, useless pin bit is 0 ;useful pin bit is 1
+HKR,"DriverData","gpio_pin_status_mask",0x00010001, 0x4001000
+
+;PIN_CTRL pin status mask, useless pin bit is 0 ;useful pin bit is 1
+HKR,"DriverData","ctrl_pin_status_mask",0x00010001, 0xFFFFFFC4
+
+;Safely_Remove_Hardware=1: enable, by default
+;Safely_Remove_Hardware=0: disable, then Polaris will not appear in the safely remove hardware icon list. 
+HKR,"DriverData","Safely_Remove_Hardware",0x00010001, 0x00, 0x00, 0x00, 0x00
+
+;-------------------------------------------------------------------
+; Crossbar AddReg sections
+;
+;---Crossbar registry values---
+;
+; Note: For each pin on the crossbar, specify the following:
+; (1) Pin type
+;     0 - SVIDEO
+;     1 - Tuner
+;     2 - Composite
+;     3 - audio tuner in
+;     4 - audio line in
+;     7 - YUV
+; (2) InputMux - input mux to use for the selected pin
+; (3) RelatedPinIndex
+;-------------------------------------------------------------------
+
+
+;---Crossbar registry values---
+;Pin 0 - Tuner In
+; Input Mux       : VIN2_1 for Tuner input from NXP18271
+HKR,"DriverData\XBarPin0","PinType",0x00010001, 0x01,0x00,0x00,0x00
+HKR,"DriverData\XBarPin0","InputMux",0x00010001, 0x01,0x00,0x00,0x00
+HKR,"DriverData\XBarPin0","RelatedPinIndex",0x00010001, 0x03,0x00,0x00,0x00
+
+;Pin 1 - Composite in
+; Input Mux       : VIN2_1 for Composite
+HKR,"DriverData\XBarPin1","PinType",0x00010001, 0x02,0x00,0x00,0x00
+HKR,"DriverData\XBarPin1","InputMux",0x00010001, 0x02,0x00,0x00,0x00
+HKR,"DriverData\XBarPin1","RelatedPinIndex",0x00010001, 0x04,0x00,0x00,0x00
+
+;Pin 2 - S-Video in
+; Input Mux       : VIN1_1 for Luma, VIN1_2 for Chroma
+HKR,"DriverData\XBarPin2","PinType",0x00010001, 0x00,0x00,0x00,0x00
+HKR,"DriverData\XBarPin2","InputMux",0x00010001, 0x01,0x01,0x00,0x00
+HKR,"DriverData\XBarPin2","RelatedPinIndex",0x00010001, 0x04,0x00,0x00,0x00
+
+;Pin 3 - Tuner Audio
+HKR,"DriverData\XBarPin3","PinType",0x00010001, 0x03,0x00,0x00,0x00
+HKR,"DriverData\XBarPin3","InputMux",0x00010001, 0x00,0x00,0x00,0x00
+HKR,"DriverData\XBarPin3","RelatedPinIndex",0x00010001, 0x00,0x00,0x00,0x00
+
+;Pin 4 - Audio Line in
+HKR,"DriverData\XBarPin4","PinType",0x00010001, 0x04,0x00,0x00,0x00
+HKR,"DriverData\XBarPin4","InputMux",0x00010001, 0x00,0x00,0x00,0x00
+HKR,"DriverData\XBarPin4","RelatedPinIndex",0x00010001, 0x01,0x00,0x00,0x00
+HKR,"DriverData\XBarPin4","GpioMask",0x00010001, 0x01,0x00,0x00,0x00
+HKR,"DriverData\XBarPin4","GpioSettings",0x00010001, 0x00,0x00,0x00,0x00
+
+;Tuner in video input is the default
+HKR,"DriverData","VideoInputPin",0x00010001, 0x00,0x00,0x00,0x00
+
+;Tuner in audio in input is the default audio
+HKR,"DriverData","AudioInputPin",0x00010001, 0x03,0x00,0x00,0x00
+
+HKR,"DriverData","ForceAudioWithVideoPin",0x00010001, 0x01,0x00,0x00,0x00
+
+;Enable auto format detection for PAL and SECAM
+HKR,"DriverData","EnableAutoFormatDetection",0x00010001, 0x01, 0x00, 0x00, 0x00
+
+[RDE258M.AddReg]
+;DVT=0,EVK=1,FPGA=2,RDE258M = 11, RDU252 =10
+HKR,"DriverData","BoardType",0x00010001, 0x11, 0x00, 0x00, 0x00
+
+;---Tuner registry values------
+;Tuner Type - Sidewinder = 0X22=34D  
+;Tuner Type - xceive5000= 0x25=37D.
+;Tuner Type - nxp18271 = 0x28 = 40D
+;Tuner Type - xceive5200 = 0x2B = 43D
+HKR,"DriverData","TunerType",0x00010001, 0x2B, 0x00, 0x00, 0x00
+
+;Tuning strategy - Use KS_TUNER_STRATEGY_PLL or not  TRUE: 0x01  FALSE: 0x00
+HKR,"DriverData","TunerUsePllTuningStrategy",,0x00010001, 0x00, 0x00, 0x00, 0x00
+
+;Tuner I2c address sidewinder :0xc6,0x0a,0x00
+;Tuner I2c address xceive5000/5200 :0xC2
+;Tuner I2c address nxp18271 :0xC0
+HKR,"DriverData","TunerI2CAddress",0x00010001, 0xC2, 0x00, 0x00, 0x00
+
+;Tuner xceive5000/5200  crystal frequency=32M
+;Tuner nxp18271    crystal frequency=16M
+HKR,"DriverData","AnalogTunerXTALFreq",0x00010001, 0x20, 0x00, 0x00, 0x00
+
+;Saw filter type: Temex=0,TRIQUINT/SAWTEK=1,EPCOS=2, Bypass=3
+;for sidewinder :Temex =>xtal_freq=1218600000(1218.6Mhz)
+HKR,"DriverData","SawFilterType",0x00010001, 0x3, 0x00, 0x00, 0x00
+
+;I2C speed: 0-1M,1-400K,2-100K,3-5M
+HKR,"DriverData","I2CSpeed",0x00010001, 0x1, 0x00, 0x00, 0x00
+
+;I2C mode: 0-STOP, 1-NON STOP
+HKR,"DriverData","I2CMode",0x00010001, 0x0, 0x00, 0x00, 0x00
+
+
+;Enable SoftEncode - TRUE
+HKR,"DriverData","Enable_SW_Encoder",0x00010001, 0x01, 0x00, 0x00, 0x00
+
+; for creating unique serial number to Tuners on the board
+HKR,"DriverData","NoOfTuners",0x00010001, 0x01, 0x00, 0x00, 0x00
+
+;tuner category : 0 - Analog, 1 - Digital , 2 - Hybrid
+HKR,"DriverData","TunerCategory",0x00010001, 0x02, 0x00, 0x00, 0x00
+
+;Enable TS capture and BDA filter registration
+HKR,"DriverData","Enable_BDA",0x00010001, 0x01, 0x00, 0x00, 0x00
+
+; BDA_Demod_Tuner_Type
+; ALTAIR_SIDEWINDER = 2
+; GEMINI3_SIDEWINDER = 5
+; AQUARIUS_XC5000 = 6
+; GEMINI3_XC5000 = 9
+;AQUARIUS_NXP18271 = 0x0b
+;GEMINI3__NXP18271 = 0x0c
+;CE6353__XC5200 = 0x10
+HKR,"DriverData","BDA_Demod_Tuner_type",0x00010001, 0x10, 0x00, 0x00, 0x00
+
+; Demod Crystal Freq
+; Altair:56M(0xDAC0),  GeminiIII : 24.69M(0x6072),Aquarius: 24MHz(0x5dc0 kHz).  NOTE: unit is KHz
+HKR,"DriverData","DemodXTALFreqKHz",0x00010001, 0xb0, 0x4f, 0x00, 0x00
+
+; digital Demod I2C address 
+; Altair:0x0A,  GeminiIII : 0x32, Aquarius: 0x02, CE6353: 0x1E
+HKR,"DriverData","DemodI2CAddress",0x00010001, 0x1E, 0x00, 0x00, 0x00
+
+; GPIO Pin values 
+; IMPORTANT !!! if any GPIO is not used - just delete the corresponding entry !!!
+;only for xc5000/5200 tuner
+HKR,"DriverData","tuner_reset_gpio_bit", 0x00010001, 0x03, 0x00, 0x00, 0x00
+
+HKR,"DriverData","tuner_sif_fm_gpio_bit", 0x00010001, 0x05, 0x00, 0x00, 0x00
+
+;The GPIO pin used for XC5000 GPIO emulated I2C bus SCL, GPIO26->SCL
+HKR,"DriverData","XC_GPIO_I2C_SCL", 0x00010001, 0x1A, 0x00, 0x00, 0x00
+
+;The GPIO pin used for XC5000 GPIO emulated I2C bus SDA, GPIO27->SDA
+HKR,"DriverData","XC_GPIO_I2C_SDA", 0x00010001, 0x1B, 0x00, 0x00, 0x00
+
+
+;Demod Comm mode : 0x00 = Serial, 0x01 = Parallel
+HKR,"DriverData","DemodTransferMode",0x00010001, 0x00, 0x00, 0x00, 0x00
+
+;Tuner I2C master selection
+;Polaris I2C master 3--3, Polaris I2C master 2--2
+HKR,"DriverData","TunerI2CMaster",0x00010001, 0x03, 0x00, 0x00, 0x00
+
+
+;Demod I2C master selection
+;Polaris I2C master 3--3, Polaris I2C master 2--2
+HKR,"DriverData","DemodI2CMaster",0x00010001, 0x03, 0x00, 0x00, 0x00
+
+;Cx24232 demod sleep GPIO control pin
+HKR,"DriverData","BDA_Demod_GPIO_PIN",0x00010001, 0x1E, 0x00, 0x00, 0x00
+
+;shutdown tuner power when switch to baseband video
+HKR,"DriverData","ShutdownTunerInCVBS",0x00010001, 0x00, 0x00, 0x00, 0x00
+
+[CXDVBT.AddReg]
+HKLM,System\CurrentControlSet\Control\MediaCategories\%TSPinID%,Display,1, 00,00,00,00
+HKLM,System\CurrentControlSet\Control\MediaCategories\%TSPinID%,Name,,%TSPinName%
+
+
+[POLARIS.RDE258M.Interfaces]
+AddInterface={65e8773d-8f56-11d0-a3b9-00a0c9223196},%KsNameFilter%,VID_Polaris_RDE258M_Interface,
+AddInterface={a799a802-a46d-11d0-a18c-00a02401dcd4},%PolarisTVAudioReferenceGuid%,TvAudio_PolarisInterface,
+AddInterface={a799a801-a46d-11d0-a18c-00a02401dcd4},%PolarisXBARReferenceGUID%,CXXBAR_PolarisInterface,
+AddInterface={a799a800-a46d-11d0-a18c-00a02401dcd4},%PolarisTunerReferenceGuid%,CXTUNE_PolarisInterface,
+AddInterface=%KSCATEGORY_AUDIO%,%PolarisAudioReferenceGuid%,AUD_PolarisInterface
+;BDA Tuner
+AddInterface=%KSCATEGORY_BDATUNER%,%KSSTRING_BdaPolarisSWTunerFilter%,CXBDATUNE_Interface,
+AddInterface={FD0A5AF4-B41D-11d2-9C95-00C04F7971E0},%KsTSNameFilter%,TS_Interface
+
+[POLARIS.RDE258M.NT.Interfaces]
+AddInterface={65e8773d-8f56-11d0-a3b9-00a0c9223196},%KsNameFilter%,VID_Polaris_RDE258M_Interface,
+AddInterface={a799a802-a46d-11d0-a18c-00a02401dcd4},%PolarisTVAudioReferenceGuid%,TvAudio_PolarisInterface,
+AddInterface={a799a801-a46d-11d0-a18c-00a02401dcd4},%PolarisXBARReferenceGUID%,CXXBAR_PolarisInterface,
+AddInterface={a799a800-a46d-11d0-a18c-00a02401dcd4},%PolarisTunerReferenceGuid%,CXTUNE_PolarisInterface,
+;AddInterface=%KSCATEGORY_AUDIO%,%PolarisAudioReferenceGuid%,AUD_PolarisInterface,
+AddInterface=%KSCATEGORY_AUDIO_CAP%,%PolarisAudioReferenceGuid%,AUD_PolarisInterface,
+;BDA Tuner
+AddInterface =%KSCATEGORY_BDATUNER%,%KSSTRING_BdaPolarisSWTunerFilter%,CXBDATUNE_Interface,
+AddInterface={FD0A5AF4-B41D-11d2-9C95-00C04F7971E0},%KsTSNameFilter%,TS_Interface
+
+[CXBDATUNE_Interface]
+AddReg = CXBDATUNE_Interface.AddReg
+
+[CXBDATUNE_Interface.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%BdaTunerFriendlyName_PolarisDVBT%
+
+
+
+[VID_Polaris_RDE258M_Interface]
+AddReg=VID_PolarisInterface.AddReg
+AddReg=POLARIS_RDE258M_DESCRIPTION.AddReg
+
+
+[VID_PolarisInterface.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%       ; {17CCA71B-ECD7-11D0-B908-00A0C9223196}
+HKR,,FriendlyName,,%PolarisVIDFriendlyName%
+
+
+[POLARIS_RDE258M_DESCRIPTION.AddReg]
+HKR,,Description,,%CXPOLARIS.DeviceDesc-RDE258M%
+
+
+[AUD_PolarisInterface]
+AddReg=AUD_PolarisInterface.AddReg
+
+[AUD_PolarisInterface.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%       ; {17CCA71B-ECD7-11D0-B908-00A0C9223196}
+HKR,,FriendlyName,,%PolarisAudioFriendlyName%
+
+
+[TvAudio_PolarisInterface]
+AddReg=TvAudio_PolarisInterface.AddReg
+
+[TvAudio_PolarisInterface.AddReg]
+HKR,,CLSID,,%CLSID_TVAudioFilter%
+HKR,,FriendlyName,,%PolarisTVAudioFriendlyName%
+
+[CXXBAR_PolarisInterface]
+AddReg=CXXBAR_PolarisInterface.AddReg
+
+[CXXBAR_PolarisInterface.AddReg]
+HKR,,CLSID,,%CLSID_CrossbarFilter%
+HKR,,FriendlyName,,%PolarisXBARFriendlyName%
+
+[CXTUNE_PolarisInterface]
+AddReg=CXTUNE_PolarisInterface.AddReg
+
+[CXTUNE_PolarisInterface.AddReg]
+HKR,,CLSID,,%CLSID_CTVTunerFilter%
+HKR,,FriendlyName,,%PolarisTunerFriendlyName%
+
+
+[TS_Interface]
+AddReg=TS_Interface.AddReg
+
+[TS_Interface.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%       ; {17CCA71B-ECD7-11D0-B908-00A0C9223196}
+HKR,,FriendlyName,,%TSFriendlyName%
+
+
+;
+; Services installation
+;
+
+[POLARIS.RDE258M.Services]
+AddService = CXPOLARIS,2,PolarisVID.RDE258M.ServiceInstall
+
+[POLARIS.RDE258M.NT.Services]
+AddService = CXPOLARIS,2,PolarisVID.RDE258M.ServiceInstall
+
+
+[PolarisVID.RDE258M.ServiceInstall]
+DisplayName   = %CXPOLARIS.DeviceDesc-RDE258M%
+ServiceType   = 1
+StartType     = 3
+ErrorControl  = 1
+ServiceBinary = %10%\system32\drivers\cxRDE258M.sys
+
+
+
+;---------------------------------------------------------------
+;                S t r i n g s
+;---------------------------------------------------------------
+
+[Strings]
+
+;
+; Device Names
+
+CXPOLARIS.DeviceDesc-RDE258M                = "Conexant Polaris RDE258M Video Capture (NTSC/PAL/DVB-T)"
+CXPOLARIS.DeviceDesc-CIR                   = "Conexant Polaris Unused CIR Function"
+
+; Friendly Names
+;
+PolarisVIDFriendlyName              = "Conexant Polaris Video Capture"
+PolarisTVAudioFriendlyName          = "Conexant Polaris TvAudio"
+PolarisTunerFriendlyName            = "Conexant Polaris Tuner"
+PolarisAudioFriendlyName            = "Conexant Polaris Audio Capture"
+PolarisXBARFriendlyName             = "Conexant Polaris Crossbar"
+BdaTunerFriendlyName_PolarisDVBT  = "Conexant Polaris DVB-T BDA Tuner (Polaris)"
+;
+; Reference GUIDS
+;
+KsNameFilter                      = "{9B365890-165F-11D0-A195-0020AFD156E4}"
+PolarisTVAudioReferenceGuid         = "{D8D86791-A570-4a10-8457-08C957E90ECD}"
+PolarisXBARReferenceGUID            = "{47B00748-34A2-4000-A892-BA2ABF2E2BE4}"
+PolarisTunerReferenceGuid           = "{F7CCD5C2-8766-4401-BF9D-ECF5FE0A07C0}"
+PolarisAudioReferenceGuid           = "{5EAF914D-2212-4034-8C4C-02CAFD15D68A}"
+;
+; Pin Name GUIDS
+;
+POLARIS_GUID.PINNAME_ANALOG_AUDIO_IN = "{3E2D189F-B15C-4447-96F1-BD1D64FB99BA}"
+POLARIS_GUID.PINNAME_AUDIO_OUT       = "{13FFFECC-3C46-4e52-8B07-4ED850E5FB49}"
+
+;
+; Pin Names
+;
+PinName.AnalogAudioOut            = "Audio Out"
+Pin.p2AnalogAudioIn               = "Analog Audio In"
+
+;
+; PROPSETIDs in the driver
+;
+GUID.POLARIS_VERSION_INFORMATION_PROPERTIES = "{2038EEA5-AE84-4a00-B174-9673AB35F1DC}"
+
+;
+; Property page GUIDS
+;
+GUID.DriverVersion_Properties="{1979C7E7-FB3B-42ff-B070-0D8F49A1A42D}"
+
+
+;
+; Other Strings
+;
+
+KSCATEGORY_AUDIO             = "{6994AD04-93EF-11D0-A3CC-00A0C9223196}"
+KSCATEGORY_AUDIO_CAP         = "{33D9A762-90C8-11D0-BD43-00A0C911CE86}"
+CLSID_TVAudioFilter          = "{71F96462-78F3-11d0-A18C-00A0C9118956}"
+CLSID_CrossbarFilter         = "{71F96460-78F3-11d0-A18C-00A0C9118956}"
+CLSID_CTVTunerFilter         = "{266EEE40-6C63-11cf-8A03-00AA006ECB65}"
+
+
+Proxy.CLSID                  = "{17CCA71B-ECD7-11D0-B908-00A0C9223196}"
+MediaCategories              = "SYSTEM\CurrentControlSet\Control\MediaCategories"
+MediaSets                    = "System\CurrentControlSet\Control\MediaSets"
+MediaInterfaces              = "System\CurrentControlSet\Control\MediaInterfaces"
+
+
+; Specify the GUID for the BDA Source Filters category in GraphEdit.
+;
+KSCATEGORY_BDATUNER="{71985F48-1CA1-11d3-9CC8-00C04F7971E0}"
+
+; Specify the GUID for the digital tuner Filter.
+;
+; NOTE!  This must match the reference guid specified in the driver's filter
+;        descriptor.
+;
+KSSTRING_BdaPolarisSWTunerFilter="{E01E1072-3DF3-4C23-B99F-6A27A7CC7CD2}"
+;
+; Specify the GUID for the tuner device's SW PnP ID
+;
+BdaSWTuner.DeviceId =   "{828B00F0-9A04-4692-8573-535B05DFF3F4}"
+
+TSPinID             =   "{5237C937-0A21-4f7e-B338-DE0D0793D03F}"
+TSPinName           =   "TS Out"
+TSFriendlyName      = 	"Conexant Polaris AVStream TS Capture(DVB-T)"
+KsTSNameFilter      =   "{452660BD-3B39-4e34-9B97-3D3BC054AF5D}"

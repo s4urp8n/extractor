@@ -1,0 +1,66 @@
+;------------------------------------------------------------------------
+; 
+;  Copyright and Disclaimer: 
+;  
+;     --------------------------------------------------------------- 
+;     This software is provided "AS IS" without warranty of any kind, 
+;     either expressed or implied, including but not limited to the 
+;     implied warranties of noninfringement, merchantability and/or 
+;     fitness for a particular purpose.
+;     --------------------------------------------------------------- 
+;   
+;     Copyright (c) 2011 Conexant Systems, Inc. 
+;     All rights reserved. 
+;
+;     ---------------------------------------------------------------
+; 
+;  
+;-------------------------------------------------------------------------
+
+
+[Version]
+signature="$CHICAGO$"
+Class=Media
+ClassGUID={4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider="Conexant"
+DriverVer=03/29/2011,7.0.121.3
+CatalogFile=cxUncir.cat
+
+[Manufacturer]
+"Conexant"=Conexant, NTx86, NTamd64
+
+
+
+[Conexant.NTx86]
+
+
+;If CIR function is not wanted, install this dummy CIR driver
+%CXPOLARIS.DeviceDesc-CIR%=POLARIS.CIR,  USB\VID_0572&PID_58AE&MI_00
+%CXPOLARIS.DeviceDesc-CIR%=POLARIS.CIR,  USB\VID_0572&PID_58AF&MI_00
+
+
+[Conexant.NTamd64]
+
+
+;If CIR function is not wanted, install this dummy CIR driver
+%CXPOLARIS.DeviceDesc-CIR%=POLARIS.CIR,  USB\VID_0572&PID_58AE&MI_00
+%CXPOLARIS.DeviceDesc-CIR%=POLARIS.CIR,  USB\VID_0572&PID_58AF&MI_00
+
+[POLARIS.CIR]
+
+[POLARIS.CIR.NT]
+
+[POLARIS.CIR.NT.Services]
+AddService = , 2  ; null service install
+
+
+;---------------------------------------------------------------
+;                S t r i n g s
+;---------------------------------------------------------------
+
+[Strings]
+
+;
+; Device Names
+
+CXPOLARIS.DeviceDesc-CIR                   = "Conexant Polaris Unused CIR Function"
