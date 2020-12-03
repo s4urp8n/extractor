@@ -19,6 +19,8 @@ namespace Zver {
         const OS_8  = '8';
         const OS_81 = '81';
         const OS_10 = '10';
+        const OS_11 = '11';
+        const OS_12 = '12';
 
         protected static $attempted = [];
 
@@ -1856,10 +1858,39 @@ namespace Zver {
             return $oses;
         }
 
+        public static function getFullOSList()
+        {
+            $list = self::getOSList();
+
+            $list[static::getFullOSName(static::OS_11, static::ARCH_32)] = [
+                'name'  => 'Windows 10 (11_32)',
+                'value' => static::OS_11,
+                'arch'  => static::ARCH_32,
+            ];
+            $list[static::getFullOSName(static::OS_11, static::ARCH_64)] = [
+                'name'  => 'Windows 10 (11_64)',
+                'value' => static::OS_11,
+                'arch'  => static::ARCH_64,
+            ];
+
+            $list[static::getFullOSName(static::OS_12, static::ARCH_32)] = [
+                'name'  => 'Windows 10 (12_32)',
+                'value' => static::OS_12,
+                'arch'  => static::ARCH_32,
+            ];
+            $list[static::getFullOSName(static::OS_12, static::ARCH_64)] = [
+                'name'  => 'Windows 10 (12_64)',
+                'value' => static::OS_12,
+                'arch'  => static::ARCH_64,
+            ];
+
+            return $list;
+        }
+
         public static function getOSList()
         {
             return [
-                static::getFullOSName(static::OS_5, static::ARCH_32)  => [
+                static::getFullOSName(static::OS_5, static::ARCH_32) => [
                     'name'        => 'Windows XP 32-bit',
                     'value'       => static::OS_5,
                     'osRegexp'    => '#\b5\.1\b#',
